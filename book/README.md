@@ -29,3 +29,7 @@ This handbook works from beginner concepts to implementation and defensive testi
 17. [CDNs and caching](../docs/16-cdn-vs-cache-keycloak-assets.md)
 
 Then [practice with labs](../labs/01-first-jwt-device-flow.md) and [check your understanding](../exercises/questions-and-answers.md).
+
+## Detailed teaching slides
+
+Use the [text-first slide outlines](slides/README.md) after each chapter. They contain concise on-slide material, fuller technical explanations, self-checks, and references. Visual branding and animation production are managed separately.
