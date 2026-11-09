@@ -15,10 +15,10 @@ Imagine a school notebook application:
 
 ```mermaid
 flowchart LR
-    U["Alice<br/>User"] -->|"Uses"| B["lesson-web<br/>Browser or application"]
+    U["Alice<br/>User"] -->|"Uses"| B["lesson-web<br/>Running client application"]
     B -->|"Login redirects"| K["Keycloak<br/>Identity and token server"]
     K -->|"Authentication result and tokens<br/>according to selected flow"| B
-    B -->|"Access token or backend session"| API["notes-api<br/>Resource server"]
+    B -->|"API request with access token"| API["notes-api<br/>Resource server"]
     API -->|"Checks token and policy"| DEC{"Allowed for this notebook?"}
     DEC -->|"Yes"| OK["200: Show permitted notes"]
     DEC -->|"Missing or invalid credential"| NO["401: Authenticate"]
