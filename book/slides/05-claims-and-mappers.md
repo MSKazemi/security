@@ -1,0 +1,248 @@
+# Teaching slides — JWT claims and Keycloak protocol mappers
+
+**Audience:** beginner and intermediate identity/security engineers.  
+**Source chapter:** [Claims and protocol mappers](../../docs/05-claims-and-mappers.md).  
+**Format:** 12 detailed text-only educational slides. Branding, animation, publishing and rendered deck production are deferred.
+
+---
+
+## Slide 01 — Claims are payload facts
+
+**Learning objective:** Distinguish claims from token header and signature.
+
+**On-slide text**
+
+- JWT payload carries named claims
+- Header holds alg and kid
+- Signature protects integrity
+- Decode is not verify
+
+**Teaching explanation:** A claim is a named value carried in the payload of a JWT. The header records information needed to process the signed token, and the signature protects against modification under a trusted key. A decoded string may look valid while being entirely forged. Only after the API has verified an appropriate token's signature and security context may it use the claims for a decision. Claims can describe identity, token issuer, audience, lifetime, or potentially granted scopes.
+
+**Diagram or worked example:** Three fields of JWS compact form with example claim names in middle only.
+
+**Self-check:** Does reading sub prove it came from Keycloak?  
+**Answer:** No, verification and issuer checks come first.
+
+**Sources:** Chapter §1; RFC 7519. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+
+## Slide 02 — Understand standard claim names
+
+**Learning objective:** Know the security role of issuer, subject, audience and time.
+
+**On-slide text**
+
+- iss = trusted issuer
+- sub = subject identifier
+- aud = intended API
+- exp/nbf/iat = time context
+
+**Teaching explanation:** An API checks iss against its preconfigured trusted issuer and aud against its own expected audience. The sub claim identifies the principal under that issuer, not necessarily a friendly username or stable cross-issuer identity. exp defines expiration, nbf can delay validity, and iat records issuance time. A signed token for an unrelated resource is the wrong credential even if its signature verifies.
+
+**Diagram or worked example:** Small matrix of claim, meaning and validation obligation.
+
+**Self-check:** Should notes-api accept a token addressed only to billing-api?  
+**Answer:** No.
+
+**Sources:** Chapter §2; RFC 7519; RFC 9068. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+
+## Slide 03 — Provider-specific claims are not universal
+
+**Learning objective:** Avoid assuming Keycloak's extensions exist in every token.
+
+**On-slide text**
+
+- scope may describe granted access
+- realm_access.roles is Keycloak-specific
+- resource_access holds client roles when mapped
+- azp does not replace aud
+
+**Teaching explanation:** Keycloak commonly emits role information into realm_access.roles or resource_access, but mapping, client scopes and token type determine whether those paths are present. Other providers may use different claim names. The azp claim in relevant profiles identifies the authorized party/client, not necessarily the target API. Validate required roles using the issuer's actual token schema, and always combine any claims with object-level authorization.
+
+**Diagram or worked example:** Compare a standard claim list against a Keycloak-specific role shape.
+
+**Self-check:** Is resource_access a universal JWT specification field?  
+**Answer:** No; it is a provider-specific convention.
+
+**Sources:** Chapter §2; Keycloak Admin Guide. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+
+## Slide 04 — Five sources behind one token
+
+**Learning objective:** Explain the origin of standard and mapped claims.
+
+**On-slide text**
+
+- Identity storage / federation
+- User and group roles
+- Client scopes and mappers
+- Authentication session and realm settings
+
+**Teaching explanation:** Keycloak can draw identity from local storage or trusted federation, role assignments from users and groups, claim mapping rules from client scopes, and authentication context from current session state. The token engine adds standard metadata such as issuer and expiry according to policy. A mapper is not required for every built-in value. This origin story helps debug claims while avoiding the false idea that every property is copied directly from a user record.
+
+**Diagram or worked example:** Use Chapter §3 diagram showing five sources converging at token claim construction.
+
+**Self-check:** Does Keycloak need a custom protocol mapper just to set exp?  
+**Answer:** No, standard metadata is generated by the engine.
+
+**Sources:** Chapter §3; Keycloak Server Administration Guide. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+
+## Slide 05 — Fictional token: read claims carefully
+
+**Learning objective:** Separate data present in token from current permission.
+
+**On-slide text**
+
+- Alice has subject alice-123
+- aud includes notes-api
+- scope notes:read
+- Reader role does not bypass notebook ownership
+
+**Teaching explanation:** A sample claims payload might contain Alice's subject, notes-api as audience, a notes:read scope and a Keycloak client reader role. This is a teaching fixture and not a signed usable token. Even when genuinely issued, these claims do not automatically let Alice read Bob's private notebook; notes-api still applies current resource policy. If audience is missing, the API should not simply treat azp or client registration as an adequate substitute.
+
+**Diagram or worked example:** Use synthetic JSON from Chapter §4 and a separate API decision gate.
+
+**Self-check:** Does a reader role authorize every student's private notes?  
+**Answer:** No.
+
+**Sources:** Chapter §4; RFC 8725. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+
+## Slide 06 — Protocol mappers: select where information appears
+
+**Learning objective:** Understand claim transformation and token destination.
+
+**On-slide text**
+
+- Mapper selects a source value
+- Mapper chooses claim name/type
+- Can target ID, access and/or UserInfo
+- No implied user-role assignment
+
+**Teaching explanation:** A Keycloak protocol mapper can take an attribute such as Alice's email and expose it as a claim. Depending on the mapping options, it may be emitted into the ID token, access token, UserInfo, or a subset of these outputs. The source attribute's existence does not mean it is disclosed in every token. Likewise, defining an email mapper does not grant Alice any resource permissions. In general, minimize claims to what each recipient needs.
+
+**Diagram or worked example:** Chapter §5 mapping diagram from attribute and effective scope to three different outputs.
+
+**Self-check:** If email appears in an ID token, must it appear in access token?  
+**Answer:** No, mapper destination configuration controls it.
+
+**Sources:** Chapter §5; Keycloak Admin Guide. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+
+## Slide 07 — Client scope versus OAuth scope versus role
+
+**Learning objective:** Disambiguate similar-sounding security nouns.
+
+**On-slide text**
+
+- OAuth scope parameter requests values
+- Keycloak client scope groups mappers/mappings
+- Role is an assigned capability grouping
+- API policy handles the exact resource
+
+**Teaching explanation:** The OAuth scope parameter in an authorization request can include openid and email. Keycloak client scopes are reusable bundles of mappers and role-scope mappings. Roles are associated with principals, often through direct or group assignment. An optional client scope may need to be requested explicitly; a default scope applies automatically. None of these substitutes for the API's responsibility to enforce permissions on the actual requested object.
+
+**Diagram or worked example:** Four stacked definitions with connecting arrows, not equal sign.
+
+**Self-check:** Does a client scope assign a role to Alice?  
+**Answer:** No.
+
+**Sources:** Chapter §§6–7; Keycloak Admin Guide. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+
+## Slide 08 — Default, optional and dedicated client scopes
+
+**Learning objective:** Describe how scope mappings become effective.
+
+**On-slide text**
+
+- Default is applied automatically
+- Optional applies when requested and allowed
+- Dedicated is per-client UI representation
+- Role-scope policy can restrict eligibility
+
+**Teaching explanation:** Default Keycloak client scopes normally contribute their mappers without needing a matching scope parameter value. An optional scope is activated when the application requests it and policy allows it. The dedicated client-scope view shows client-specific mappers and role-scope mappings and cannot be independently shared. Effective mappers also depend on conditions and role scope permissions. Use Evaluate for real configuration inspection rather than inferring claim presence from scope name.
+
+**Diagram or worked example:** Two sample requests: scope=openid versus scope=openid email; show which mapper may run.
+
+**Self-check:** Will optional email always apply when client requests only openid?  
+**Answer:** No, not without other effective mapping configuration.
+
+**Sources:** Chapter §6; Keycloak Admin Guide. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+
+## Slide 09 — Three controls for role claims
+
+**Learning objective:** Debug why an assigned role may not appear.
+
+**On-slide text**
+
+- Role is assigned or inherited
+- Role-scope mapping makes it eligible
+- Access-token mapper emits it
+- API authorizes resource separately
+
+**Teaching explanation:** A missing role claim can be caused by no real assignment, a scope policy that filters the role, a missing or misconfigured mapper, or a mapper targeting another token destination. Ask which realm and client were used and whether a fresh token was issued after configuration changes. Turning on broad role exposure is not a robust fix. The API must still check the requested notebook even after a valid role claim appears.
+
+**Diagram or worked example:** Chapter §7 flowchart with three decision gates and separate notes-api authorization gate.
+
+**Self-check:** Would adding a role mapper itself assign the role?  
+**Answer:** No.
+
+**Sources:** Chapter §7; Keycloak role-mapper documentation. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+
+## Slide 10 — Audience resolver versus requesting client
+
+**Learning objective:** Explain why azp does not replace the aud claim.
+
+**On-slide text**
+
+- azp identifies requesting client under profile
+- aud names intended resource recipients
+- Audience mapper can add notes-api
+- API must check aud for itself
+
+**Teaching explanation:** Keycloak may fill aud with an explicit audience protocol mapper or its Audience Resolve mapper, depending on effective client role mappings and scopes. A running OAuth client named lesson-web may request a token, but that does not automatically include notes-api as its audience. The API must reject a token not addressed to it, even if its signature is valid. Client registration is therefore different from API audience authorization.
+
+**Diagram or worked example:** Two labels: requested-by lesson-web versus addressed-to notes-api, feeding API validation.
+
+**Self-check:** Can an API replace aud validation with azp=lesson-web?  
+**Answer:** No.
+
+**Sources:** Chapter §8; Keycloak Audience documentation. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+
+## Slide 11 — Use Evaluate and debug safely
+
+**Learning objective:** Practice a reproducible nonproduction Keycloak inspection.
+
+**On-slide text**
+
+- Choose a disposable school-lab realm
+- Inspect test user roles and client scopes
+- Compare optional scopes in Evaluate
+- Inspect access vs ID vs UserInfo claims
+
+**Teaching explanation:** The Keycloak Admin Console's Client scopes → Evaluate view can simulate effective mappers and token claims for a chosen fictional client/user. Inspect role assignment, scope associations, destination toggles and audience mappers. Compare scope=openid and scope=openid email under known configuration. Never publish actual access or refresh tokens or accidentally copy real users' personally identifying fields into course material. Administrative UI paths vary by Keycloak version.
+
+**Diagram or worked example:** Checklist diagram following Chapter §§9–10, with fictional values only.
+
+**Self-check:** Can old issued JWTs change when an admin changes a mapper?  
+**Answer:** No, normally a new token must be issued.
+
+**Sources:** Chapter §§9–10; Keycloak Admin Guide. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+
+## Slide 12 — Final mental model: claims are not permission
+
+**Learning objective:** Summarize token contents and trust boundaries.
+
+**On-slide text**
+
+- Validate issuer, audience, signature, time and type
+- Interpret effective mapper-generated claims
+- Apply object-level API policy
+- Recheck current policy for sensitive actions
+
+**Teaching explanation:** Token generation assembles claims from several sources, and protocol mappers decide where many values are represented. Once a client presents an access token, notes-api validates the right credential for itself and applies authorization for the specific action and resource. A signed token can contain stale role information after a change; sensitive actions may require a live policy check. The best design emits minimal necessary claims and does not turn client-controlled input into security authority.
+
+**Diagram or worked example:** End-to-end token claims origin → signed token → trusted API validation → notebook policy.
+
+**Self-check:** What two things must happen before a valid role claim grants a notebook read?  
+**Answer:** Token validation and the specific resource authorization check.
+
+**Sources:** Chapter §§1–12; RFC 8725. [Canonical chapter](../../docs/05-claims-and-mappers.md) · [Keycloak Server Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+

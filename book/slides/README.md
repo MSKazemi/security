@@ -9,7 +9,15 @@ Each slide specifies an educational objective, short visible text, a complete ex
 | Topic | Slides | Level | Related chapter |
 | --- | ---: | --- | --- |
 | [Keycloak fundamentals: identity, client and API](01-keycloak-fundamentals.md) | 12 | Beginner → intermediate | [Keycloak fundamentals](../../docs/01-keycloak-fundamentals.md) |
+| [How Keycloak issues JWTs](04-jwt-issuance.md) | 12 | Beginner → intermediate | [JWT issuance](../../docs/04-jwt-issuance.md) |
+| [JWT claims and protocol mappers](05-claims-and-mappers.md) | 12 | Beginner → intermediate | [Claims, roles, mappers](../../docs/05-claims-and-mappers.md) |
+| [API access-token validation](06-api-token-validation.md) | 12 | Beginner → intermediate | [API credential and authorization checks](../../docs/06-api-token-validation.md) |
+| [Bearer tokens and HTTP authentication](07-bearer-token.md) | 12 | Beginner → intermediate | [Bearer credential usage](../../docs/07-bearer-token.md) |
+| [Realm, User, Client and Client Scope](08-realm-client-user-client-scope.md) | 12 | Beginner → intermediate | [Keycloak object model](../../docs/08-realm-client-user-client-scope.md) |
 | [OAuth 2.0 vs OIDC vs Keycloak](09-oauth-oidc-keycloak.md) | 12 | Beginner → intermediate | [OAuth/OIDC/Keycloak](../../docs/09-oauth2-oidc-keycloak-relationship.md) |
+| [PKCE: Verifier, Challenge and S256](10-pkce-generation.md) | 12 | Beginner → intermediate | [PKCE mechanics](../../docs/10-pkce-generation.md) |
+| [Authorization Code vs Access Token](11-authorization-code-vs-access-token.md) | 12 | Beginner → intermediate | [Code versus access token](../../docs/11-authorization-code-vs-access-token.md) |
+| [JWT vs JWK vs JWKS](15-jwt-vs-jwks-verification.md) | 12 | Beginner → intermediate | [JWT/JWKS verification](../../docs/15-jwt-vs-jwks-verification.md) |
 
 ## Common structure
 
