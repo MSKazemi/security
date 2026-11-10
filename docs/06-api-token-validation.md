@@ -95,8 +95,8 @@ An **OIDC ID token** tells an OIDC client about a user's authentication. An **ac
 flowchart LR
     K["Keycloak"] -->|"ID token"| CLIENT["lesson-web OIDC client"]
     K -->|"Access token"| CLIENT
-    CLIENT -->|"Appropriate access token"| API["notes-api"]
-    CLIENT -.->|"ID token must be rejected"| API
+    CLIENT -->|"Access token for API"| API["notes-api"]
+    CLIENT -->|"ID token stays in client"| ID["Login evidence only: API must reject it"]
 ```
 
 Do not accept an ID token as an API bearer credential just because its signature is valid.

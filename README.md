@@ -10,7 +10,7 @@ For students, developers, and curious engineers. Start with plain language, then
 
 Read the [book-style index](book/README.md), follow the [learning roadmap](docs/00-learning-roadmap.md), or use the [glossary](book/glossary.md).
 
-**Teaching slides (text-first):** [detailed slide outlines](book/slides/README.md) for explaining the concepts in classrooms or future presentations. These are technical content notes, not rendered videos.
+**Teaching slides (text-first):** [detailed slide outlines](book/slides/README.md) for all 17 chapters. These are drafts for explanation and future presentations, not rendered decks.
 
 
 ### Chapters

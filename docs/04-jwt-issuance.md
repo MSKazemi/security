@@ -182,11 +182,11 @@ For the exact device protocol and safe local experiments, see [Device Flow](03-d
 ```mermaid
 flowchart LR
     K["Keycloak token endpoint"] -->|"Access token"| C["lesson-web client"]
-    K -->|"ID token if OIDC flow grants one"| C
+    K -->|"ID token if OIDC"| C
     K -->|"Refresh token if granted"| C
-    C -->|"Access token intended for notes-api"| API["notes-api"]
-    C -.->|"Refresh token renewal"| K
-    C -.->|"Never treat ID token as API access"| API
+    C -->|"Access token for notes-api"| API["notes-api"]
+    C -.->|"Refresh renewal"| K
+    C -->|"ID token stays in client"| ID["Login evidence only: never an API credential"]
 ```
 
 The dotted “ID token” line is **a forbidden misuse illustration**, not a legitimate request. API token validation and resource policy are explained in [Chapter 06](06-api-token-validation.md).

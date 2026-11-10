@@ -29,22 +29,22 @@ Imagine a student using a school application:
 
 ```mermaid
 flowchart TB
-    OAuth["OAuth 2.0<br/>Delegated access framework"]
-    OIDC["OpenID Connect<br/>Identity on top of OAuth 2.0"]
-    Keycloak["Keycloak<br/>Identity management software"]
     Client["Application / OAuth client"]
-    API["Protected resource API"]
-    A["Access token<br/>for the API"]
+    Keycloak["Keycloak<br/>Identity management software"]
+    OIDC["OpenID Connect<br/>Identity on top of OAuth 2.0"]
+    OAuth["OAuth 2.0<br/>Delegated access framework"]
     ID["ID token<br/>for OIDC client"]
+    A["Access token<br/>for the API"]
+    API["Protected resource API"]
     JWT["JWT<br/>One token format"]
-    OAuth --> A
+    Client -->|"requests tokens"| Keycloak
+    Keycloak -->|"implements"| OIDC
+    Keycloak -->|"implements"| OAuth
     OIDC -->|"extends"| OAuth
     OIDC --> ID
-    Keycloak -->|"implements"| OAuth
-    Keycloak -->|"implements"| OIDC
-    Client -->|"requests tokens"| Keycloak
-    A -->|"presented to"| API
+    OAuth --> A
     ID -->|"consumed by"| Client
+    A -->|"presented to"| API
     ID -.->|"is formatted as"| JWT
     A -.->|"can be formatted as"| JWT
 ```

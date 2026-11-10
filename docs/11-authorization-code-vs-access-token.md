@@ -36,12 +36,12 @@ Authorization codes and tokens are **sensitive**. Do not log, post, screenshot o
 The **running OAuth client** (`lesson-web`) is application-side code. Its **client registration** in Keycloak is server-side metadata. Keycloak hosts an authorization endpoint for browser interactions and a token endpoint for code redemption. The `notes-api` resource server is independent of both endpoints.
 
 ```mermaid
-flowchart LR
+flowchart TB
     U["Alice and browser"] -->|"Authorize and authenticate"| K["Keycloak authorization endpoint"]
-    K -->|"Redirect code"| C["lesson-web callback"]
+    K -->|"Redirect with code"| C["lesson-web callback"]
     C -->|"Code plus PKCE verifier"| T["Keycloak token endpoint"]
-    T -->|"Access token"| C
-    C -->|"Bearer access token"| A["notes-api protected resource"]
+    T -->|"Access token returned"| C2["lesson-web backend holds token"]
+    C2 -->|"Bearer access token"| A["notes-api protected resource"]
     A -->|"Token validation and policy"| P{"Allowed notebook?"}
     P -->|"Yes"| OK["Permitted result"]
     P -->|"No"| NO["Reject request"]

@@ -1,6 +1,8 @@
 # Security, Explained Simply — book index
 
-This handbook works from beginner concepts to implementation and defensive testing. Each chapter gives a short definition, a deeper explanation, a common error, and questions.
+This handbook works from beginner concepts to implementation and defensive testing. All 17 chapters now have detailed text-first slide sources **in the private content library**; these are not finished visual decks and have not all passed final QA. Each chapter gives a short definition, a deeper explanation, a common error, and questions.
+
+For the recommended learning order, start with [the roadmap](../docs/00-learning-roadmap.md). **Authorization Code + PKCE** is the usual starting point for interactive apps with a suitable browser; [Device Flow](../docs/03-device-flow.md) is reserved for constrained cases after a cross-device risk assessment. The [slide library](slides/README.md) contains text-first teaching outlines, not finished decks.
 
 ## Part I — Learn the foundations
 

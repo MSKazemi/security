@@ -8,10 +8,13 @@ These are pointers to **authoritative specifications and provider documentation*
 - [RFC 6750 — OAuth 2.0 Bearer Token Usage](https://www.rfc-editor.org/rfc/rfc6750)
 - [RFC 7636 — PKCE](https://www.rfc-editor.org/rfc/rfc7636)
 - [RFC 7662 — OAuth 2.0 Token Introspection](https://www.rfc-editor.org/rfc/rfc7662)
+- [RFC 8252 — OAuth 2.0 for Native Apps](https://www.rfc-editor.org/rfc/rfc8252)
 - [RFC 8628 — Device Authorization Grant](https://www.rfc-editor.org/rfc/rfc8628)
 - [RFC 8705 — OAuth 2.0 Mutual-TLS Client Authentication and Certificate-Bound Access Tokens](https://www.rfc-editor.org/rfc/rfc8705)
 - [RFC 9449 — OAuth 2.0 Demonstrating Proof of Possession (DPoP)](https://www.rfc-editor.org/rfc/rfc9449)
 - [RFC 9700 — OAuth 2.0 Security Best Current Practice](https://www.rfc-editor.org/rfc/rfc9700)
+- [RFC 10017 — OAuth 2.0 for Browser-Based Applications](https://www.rfc-editor.org/rfc/rfc10017)
+- [RFC 10027 — Security of Cross-Device Flows](https://www.rfc-editor.org/rfc/rfc10027)
 - [OpenID Connect Core](https://openid.net/specs/openid-connect-core-1_0.html)
 
 ## JWT and JSON Web Keys
@@ -32,3 +35,17 @@ These are pointers to **authoritative specifications and provider documentation*
 - [MDN HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching)
 
 **Technical note:** RFC 9068 specifies a **particular** access-token JWT profile, not the representation of every Keycloak JWT. RFC 9449 DPoP sender constraint is not automatically enabled by ordinary JWT signing.
+
+
+## Browser OAuth, identity deployment and caching references
+
+- [Authlib — OAuth Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/)
+- [Starlette SessionMiddleware — signed, browser-readable cookies](https://www.starlette.io/middleware/#sessionmiddleware)
+- [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter)
+- [Keycloak hostname v2 and reverse-proxy URLs](https://www.keycloak.org/server/hostname)
+- [Keycloak realm import and export](https://www.keycloak.org/server/importExport)
+- [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts)
+- [MDN HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching)
+- [MDN Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control)
+
+**Reminder:** Starlette signed client-side session data is *readable*, not an encrypted server-side token store. A full OAuth BFF protects tokens and mediates API requests; see RFC 10017.

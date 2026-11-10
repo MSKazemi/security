@@ -14,7 +14,7 @@ Imagine a school notebook application:
 - **`notes-api` (resource server)** accepts an appropriate access credential and decides whether Alice may read the specific notebook.
 
 ```mermaid
-flowchart LR
+flowchart TB
     U["Alice<br/>User"] -->|"Uses"| B["lesson-web<br/>Running client application"]
     B -->|"Login redirects"| K["Keycloak<br/>Identity and token server"]
     K -->|"Authentication result and tokens<br/>according to selected flow"| B
