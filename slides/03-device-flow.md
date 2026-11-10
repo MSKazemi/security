@@ -1,7 +1,7 @@
 # Teaching slides — OAuth Device Authorization Grant
 
 **Audience:** beginners and developers building constrained-input clients.  
-**Canonical source:** [Device Flow tutorial](../../docs/03-device-flow.md).  
+**Canonical source:** [Device Flow tutorial](../docs/03-device-flow.md).  
 **Format:** 12 detailed teaching outlines. No animations, branding, timed scenes, platform copy or rendered presentation.
 
 Examples use only fictional learning devices and synthetic credentials.
@@ -26,7 +26,7 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** Does the smart TV need to know Alice's password?  
 **Answer:** No.
 
-**Sources:** Chapter §1; RFC 8628. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §1; RFC 8628. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 02 — Device Flow is request-response, not push
 
@@ -46,7 +46,7 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** Does Keycloak automatically push a token to the TV the instant Alice approves?  
 **Answer:** No, it responds to a later valid poll.
 
-**Sources:** Chapter §2; RFC 8628 §3. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §2; RFC 8628 §3. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 03 — What does device authorization return?
 
@@ -66,7 +66,7 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** If a device response has user_code, is that value a Bearer access token?  
 **Answer:** No.
 
-**Sources:** Chapter §3; RFC 8628 §3.2. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §3; RFC 8628 §3.2. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 04 — User code and device code: who holds which?
 
@@ -86,7 +86,7 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** Which code is sent in the device's token-polling request?  
 **Answer:** device_code, not user_code.
 
-**Sources:** Chapter §3; RFC 8628. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §3; RFC 8628. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 05 — Alice's approval is a separate event
 
@@ -106,7 +106,7 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** Does scanning an official-looking QR automatically prove the request is safe?  
 **Answer:** No.
 
-**Sources:** Chapter §5; RFC 10027. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §5; RFC 10027. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 06 — First endpoint: device authorization
 
@@ -126,7 +126,7 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** Does the device authorization endpoint return a usable access token immediately?  
 **Answer:** No.
 
-**Sources:** Chapter §4; Keycloak OIDC docs; RFC 8628. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §4; Keycloak OIDC docs; RFC 8628. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 07 — Second endpoint: poll with device_code
 
@@ -146,7 +146,7 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** Which endpoint handles a device_code grant token exchange?  
 **Answer:** The token endpoint.
 
-**Sources:** Chapter §6; RFC 8628 §3.4. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §6; RFC 8628 §3.4. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 08 — Polling: pending and slow_down arithmetic
 
@@ -166,7 +166,7 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** What is minimum new interval after slow_down when current interval is 5?  
 **Answer:** 10 seconds.
 
-**Sources:** Chapter §7; RFC 8628 §3.5. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §7; RFC 8628 §3.5. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 09 — Terminal errors: know when to stop
 
@@ -186,7 +186,7 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** Should a client continue polling after expired_token?  
 **Answer:** No.
 
-**Sources:** Chapter §7; RFC 8628 §3.5. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §7; RFC 8628 §3.5. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 10 — Cross-device consent phishing is real
 
@@ -206,7 +206,7 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** Is Device Flow always a safe default for high-value resources?  
 **Answer:** No, a risk assessment and stronger alternatives may be needed.
 
-**Sources:** Chapter §9; RFC 10027. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §9; RFC 10027. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 11 — From codes to an API access token
 
@@ -226,7 +226,7 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** Can user_code authorize a notes-api request?  
 **Answer:** No.
 
-**Sources:** Chapter §8; RFC 8628; RFC 9700. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §8; RFC 8628; RFC 9700. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 12 — Review: device, codes, polling and trust
 
@@ -246,5 +246,5 @@ Examples use only fictional learning devices and synthetic credentials.
 **Self-check:** What are the next minimum intervals after two slow_down errors starting from 5?  
 **Answer:** 10 seconds, then 15 seconds.
 
-**Sources:** Chapter §§1–12; RFC 8628; RFC 10027. [Canonical chapter](../../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §§1–12; RFC 8628; RFC 10027. [Canonical chapter](../docs/03-device-flow.md) · [RFC 8628](https://www.rfc-editor.org/rfc/rfc8628) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 

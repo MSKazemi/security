@@ -1,7 +1,7 @@
 # Teaching slide outline — OAuth, OIDC and Keycloak learning roadmap
 
 **Format:** 12 detailed, text-first classroom slides. **Audience:** beginners and practicing engineers.  
-**Canonical source:** [Security learning roadmap](../../docs/00-learning-roadmap.md).  
+**Canonical source:** [Security learning roadmap](../docs/00-learning-roadmap.md).  
 **Not included:** rendered slides, branding, narration, animations or platform publishing. All examples are synthetic.
 
 ---
@@ -24,7 +24,7 @@
 **Self-check:** Does a successful login automatically grant every API operation?  
 **Answer:** No, each API must enforce appropriate resource permissions.
 
-**Sources:** Roadmap §§1–4; Keycloak docs. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §§1–4; Keycloak docs. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 02 — Authentication versus authorization
 
@@ -43,7 +43,7 @@
 **Self-check:** Can authentication alone authorize Bob's notebook?  
 **Answer:** No.
 
-**Sources:** Roadmap §§1, 5; RFC 9700. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §§1, 5; RFC 9700. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 03 — The five actors in a normal login
 
@@ -63,7 +63,7 @@
 **Self-check:** Does creating a Keycloak client registration launch the app?  
 **Answer:** No, it is configuration metadata.
 
-**Sources:** Roadmap §2; Keycloak fundamentals. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §2; Keycloak fundamentals. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 04 — OAuth, OIDC and Keycloak: three levels
 
@@ -82,7 +82,7 @@
 **Self-check:** Does OIDC replace OAuth?  
 **Answer:** No, OIDC builds on OAuth.
 
-**Sources:** Roadmap §§1, 3; OIDC Core. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §§1, 3; OIDC Core. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 05 — Choose a flow based on who runs where
 
@@ -102,7 +102,7 @@
 **Self-check:** Should every command-line tool use Device Flow?  
 **Answer:** No; prefer external-browser Authorization Code + PKCE when feasible.
 
-**Sources:** Roadmap §5; RFC 8252; RFC 10027. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §5; RFC 8252; RFC 10027. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 06 — Code and PKCE are not access tokens
 
@@ -122,7 +122,7 @@
 **Self-check:** Does notes-api check a PKCE verifier on each call?  
 **Answer:** No; PKCE is checked by the token endpoint.
 
-**Sources:** Roadmap §§4, 6; RFC 7636. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §§4, 6; RFC 7636. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 07 — Four credentials, four destinations
 
@@ -142,7 +142,7 @@
 **Self-check:** Can an API accept an ID token as a Bearer access token?  
 **Answer:** No.
 
-**Sources:** Roadmap §6; OIDC Core; RFC 9700. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §6; OIDC Core; RFC 9700. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 08 — JWT is a format; JWKS is a trusted key set
 
@@ -162,7 +162,7 @@
 **Self-check:** Does decoding a JWT verify the signature?  
 **Answer:** No.
 
-**Sources:** Roadmap §§1, 6; RFC 7517; RFC 7519. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §§1, 6; RFC 7517; RFC 7519. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 09 — An API has its own security job
 
@@ -182,7 +182,7 @@
 **Self-check:** May notes-api accept a signed token intended only for billing-api?  
 **Answer:** No.
 
-**Sources:** Roadmap §§1, 8; RFC 8725; RFC 9700. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §§1, 8; RFC 8725; RFC 9700. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 10 — Device Flow has a distinct security problem
 
@@ -202,7 +202,7 @@
 **Self-check:** Should an app trust every official-looking login QR code?  
 **Answer:** No; cross-device requests can be phished.
 
-**Sources:** Roadmap §5; RFC 8628; RFC 10027. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §5; RFC 8628; RFC 10027. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 11 — Browser architecture: BFF versus SPA
 
@@ -222,7 +222,7 @@
 **Self-check:** Does a BFF automatically eliminate CSRF and XSS?  
 **Answer:** No.
 
-**Sources:** Roadmap §5; RFC 10017. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §5; RFC 10017. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 12 — Practice, explain, and test safely
 
@@ -242,5 +242,5 @@
 **Self-check:** What is the final security question after validating a token?  
 **Answer:** Whether the requested action on this particular resource is allowed.
 
-**Sources:** Roadmap §§7–10; book index. [Canonical roadmap](../../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Roadmap §§7–10; book index. [Canonical roadmap](../docs/00-learning-roadmap.md) · [OAuth Security BCP](https://www.rfc-editor.org/rfc/rfc9700) · [Browser Apps BCP](https://www.rfc-editor.org/rfc/rfc10017).
 

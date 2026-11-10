@@ -2,7 +2,7 @@
 
 **Audience:** curious beginners, computer-science students and software engineers.  
 **Level:** beginner through intermediate.  
-**Source of truth:** [OAuth 2.0 vs OIDC vs Keycloak](../../docs/09-oauth2-oidc-keycloak-relationship.md).  
+**Source of truth:** [OAuth 2.0 vs OIDC vs Keycloak](../docs/09-oauth2-oidc-keycloak-relationship.md).  
 **Learning outcome:** distinguish identity, delegated access, client registration, token purpose, and API authorization without conflating them.
 
 Every slide below is **technical teaching material**, not a finished designed deck. The explanations are reusable as classroom notes. All examples are fictional.
@@ -25,7 +25,7 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Self-check:** Can Alice read Bob's private notebook after authenticating? **Only with explicit authorization.**
 
-**Sources:** [Chapter §§1, 9](../../docs/09-oauth2-oidc-keycloak-relationship.md); [OAuth framework RFC 6749](https://www.rfc-editor.org/rfc/rfc6749).
+**Sources:** [Chapter §§1, 9](../docs/09-oauth2-oidc-keycloak-relationship.md); [OAuth framework RFC 6749](https://www.rfc-editor.org/rfc/rfc6749).
 
 ## Slide 02 — What does OAuth 2.0 provide?
 
@@ -43,7 +43,7 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Self-check:** Does an OAuth access token automatically function as a login ID card? **No.**
 
-**Sources:** [Chapter §§2, 3](../../docs/09-oauth2-oidc-keycloak-relationship.md); [RFC 6749 §1.1](https://www.rfc-editor.org/rfc/rfc6749.html#section-1.1).
+**Sources:** [Chapter §§2, 3](../docs/09-oauth2-oidc-keycloak-relationship.md); [RFC 6749 §1.1](https://www.rfc-editor.org/rfc/rfc6749.html#section-1.1).
 
 ## Slide 03 — What does OpenID Connect add?
 
@@ -61,7 +61,7 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Self-check:** Does OIDC eliminate the need for API authorization? **No.**
 
-**Sources:** [Chapter §6](../../docs/09-oauth2-oidc-keycloak-relationship.md); [OIDC Core](https://openid.net/specs/openid-connect-core-1_0.html).
+**Sources:** [Chapter §6](../docs/09-oauth2-oidc-keycloak-relationship.md); [OIDC Core](https://openid.net/specs/openid-connect-core-1_0.html).
 
 ## Slide 04 — Where does Keycloak fit?
 
@@ -79,7 +79,7 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Self-check:** Is Keycloak itself an OAuth token format? **No.**
 
-**Sources:** [Chapter §§2, 3](../../docs/09-oauth2-oidc-keycloak-relationship.md); [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** [Chapter §§2, 3](../docs/09-oauth2-oidc-keycloak-relationship.md); [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers).
 
 ## Slide 05 — Who are the participants?
 
@@ -98,7 +98,7 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Self-check:** Is the registered `client_id` equivalent to deploying the application? **No.**
 
-**Sources:** [Chapter §§3, 5](../../docs/09-oauth2-oidc-keycloak-relationship.md); [Keycloak fundamentals](../../docs/01-keycloak-fundamentals.md).
+**Sources:** [Chapter §§3, 5](../docs/09-oauth2-oidc-keycloak-relationship.md); [Keycloak fundamentals](../docs/01-keycloak-fundamentals.md).
 
 ## Slide 06 — Four credentials, four jobs
 
@@ -119,7 +119,7 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Self-check:** Can an ID token replace an API access token because both may be signed? **No.**
 
-**Sources:** [Chapter §4](../../docs/09-oauth2-oidc-keycloak-relationship.md); [OIDC Core](https://openid.net/specs/openid-connect-core-1_0.html).
+**Sources:** [Chapter §4](../docs/09-oauth2-oidc-keycloak-relationship.md); [OIDC Core](https://openid.net/specs/openid-connect-core-1_0.html).
 
 ## Slide 07 — Authorization Code with PKCE
 
@@ -138,7 +138,7 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Self-check:** Is the original verifier sent in the initial authorization URL? **No.**
 
-**Sources:** [Chapter §8](../../docs/09-oauth2-oidc-keycloak-relationship.md); [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636).
+**Sources:** [Chapter §8](../docs/09-oauth2-oidc-keycloak-relationship.md); [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636).
 
 ## Slide 08 — A complete login with a backend
 
@@ -154,11 +154,11 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Teaching explanation:** In a Backend-for-Frontend architecture, the browser visits the application and is redirected to Keycloak. After authentication, the browser follows a redirect back carrying an authorization code and state. The trusted backend verifies the transaction, exchanges the code, validates the OIDC result and creates a server-managed session. When the browser requests notes, the backend calls the separate API with an appropriate access token.
 
-**Illustration:** Use the [complete BFF sequence diagram in chapter §5](../../docs/09-oauth2-oidc-keycloak-relationship.md) as the authoritative technical diagram. Keep the browser session cookie distinct from the OAuth token.
+**Illustration:** Use the [complete BFF sequence diagram in chapter §5](../docs/09-oauth2-oidc-keycloak-relationship.md) as the authoritative technical diagram. Keep the browser session cookie distinct from the OAuth token.
 
 **Self-check:** Does the browser necessarily receive the access token in this BFF design? **No.**
 
-**Sources:** [Chapter §5](../../docs/09-oauth2-oidc-keycloak-relationship.md); [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** [Chapter §5](../docs/09-oauth2-oidc-keycloak-relationship.md); [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers).
 
 ## Slide 09 — JWT, JWKS and Bearer are not synonyms
 
@@ -176,7 +176,7 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Self-check:** Is every OAuth access token a JWT? **No.**
 
-**Sources:** [Chapter §§2, 11](../../docs/09-oauth2-oidc-keycloak-relationship.md); [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519); [JWK RFC 7517](https://www.rfc-editor.org/rfc/rfc7517).
+**Sources:** [Chapter §§2, 11](../docs/09-oauth2-oidc-keycloak-relationship.md); [JWT RFC 7519](https://www.rfc-editor.org/rfc/rfc7519); [JWK RFC 7517](https://www.rfc-editor.org/rfc/rfc7517).
 
 ## Slide 10 — Scopes, roles and resource policies
 
@@ -195,7 +195,7 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Self-check:** Does a valid `notes:read` scope authorize every notebook? **No.**
 
-**Sources:** [Chapter §7](../../docs/09-oauth2-oidc-keycloak-relationship.md); [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** [Chapter §7](../docs/09-oauth2-oidc-keycloak-relationship.md); [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 11 — What must the API verify?
 
@@ -210,11 +210,11 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Teaching explanation:** Signature validation does not by itself establish API access. In a JWT deployment the API validates an allowed signing algorithm, trusted key, issuer, audience, expiration and other applicable constraints. With opaque tokens it may use trusted introspection. It must then check authorization for the concrete resource and action. Incorrect credentials commonly result in HTTP 401; authenticated but forbidden operations commonly result in HTTP 403.
 
-**Illustration:** A decision tree with validation stages leading to **Accept**, **401**, or **403**, matching [chapter §9](../../docs/09-oauth2-oidc-keycloak-relationship.md).
+**Illustration:** A decision tree with validation stages leading to **Accept**, **401**, or **403**, matching [chapter §9](../docs/09-oauth2-oidc-keycloak-relationship.md).
 
 **Self-check:** Would an otherwise valid JWT addressed to another API be accepted? **No.**
 
-**Sources:** [Chapter §9](../../docs/09-oauth2-oidc-keycloak-relationship.md); [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** [Chapter §9](../docs/09-oauth2-oidc-keycloak-relationship.md); [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 12 — Put it all together
 
@@ -233,4 +233,4 @@ Every slide below is **technical teaching material**, not a finished designed de
 
 **Self-check:** Describe in one minute which component validates the user's login and which component authorizes opening Bob's notebook. **The OIDC client validates the login result; the API enforces the notebook permission.**
 
-**Sources:** [Complete chapter](../../docs/09-oauth2-oidc-keycloak-relationship.md); [RFC 6749](https://www.rfc-editor.org/rfc/rfc6749); [OIDC Core](https://openid.net/specs/openid-connect-core-1_0.html); [Keycloak OIDC docs](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** [Complete chapter](../docs/09-oauth2-oidc-keycloak-relationship.md); [RFC 6749](https://www.rfc-editor.org/rfc/rfc6749); [OIDC Core](https://openid.net/specs/openid-connect-core-1_0.html); [Keycloak OIDC docs](https://www.keycloak.org/securing-apps/oidc-layers).

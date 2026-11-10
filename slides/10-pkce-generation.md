@@ -1,7 +1,7 @@
 # Technical teaching slides — PKCE, verifier and S256 challenge
 
 **Format:** detailed text-first slide source.  
-**Canonical chapter:** [PKCE: verifier, challenge and code exchange](../../docs/10-pkce-generation.md).  
+**Canonical chapter:** [PKCE: verifier, challenge and code exchange](../docs/10-pkce-generation.md).  
 **Audience:** beginner developers through protocol implementers. **Slides:** 12.
 
 No animation, branded visuals or finished presentation is included.
@@ -25,7 +25,7 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** Does PKCE replace user authentication?  
 **Answer:** No; it protects code redemption.
 
-**Sources:** Chapter §1; RFC 7636. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §1; RFC 7636. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 02 — Five values and their creators
 
@@ -46,7 +46,7 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** Does Keycloak generate the code_verifier?  
 **Answer:** No, the client does.
 
-**Sources:** Chapter §2; RFC 7636 §§4.1–4.4. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §2; RFC 7636 §§4.1–4.4. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 03 — S256: a precise formula
 
@@ -66,7 +66,7 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** Should the challenge be encrypted or is it derived from the verifier?  
 **Answer:** It is derived by hashing and encoding.
 
-**Sources:** Chapter §3; RFC 7636 §4.2. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §3; RFC 7636 §4.2. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 04 — Generate a pair locally with Python
 
@@ -86,7 +86,7 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** Which library should generate the random verifier?  
 **Answer:** A cryptographically secure generator such as Python secrets.
 
-**Sources:** Chapter §4; RFC 7636; labs/pkce_generate.py. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §4; RFC 7636; labs/pkce_generate.py. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 05 — First request: send challenge, not verifier
 
@@ -106,7 +106,7 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** When does Keycloak receive V?  
 **Answer:** Only at the token endpoint in the later exchange.
 
-**Sources:** Chapter §5; RFC 7636 §§4.3–4.4. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §5; RFC 7636 §§4.3–4.4. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 06 — Second request: prove knowledge of verifier
 
@@ -126,7 +126,7 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** Does an expired code pass just because S256 matches?  
 **Answer:** No, independent validity checks still apply.
 
-**Sources:** Chapter §§5–7; RFC 7636 §§4.5–4.6; RFC 6749. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §§5–7; RFC 7636 §§4.5–4.6; RFC 6749. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 07 — Stolen code: the attacker lacks V
 
@@ -146,7 +146,7 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** Does PKCE guarantee protection when both code and verifier are stolen?  
 **Answer:** No.
 
-**Sources:** Chapter §8; RFC 7636; RFC 9700. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §8; RFC 7636; RFC 9700. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 08 — PKCE vs state, nonce and client secret
 
@@ -166,7 +166,7 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** Is a code verifier the confidential client's password?  
 **Answer:** No, it is a short-lived request-specific proof.
 
-**Sources:** Chapter §9; RFC 9700; OIDC Core. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §9; RFC 9700; OIDC Core. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 09 — How to configure and observe PKCE in Keycloak
 
@@ -187,7 +187,7 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** If Keycloak supports PKCE but does not require it, is the client necessarily protected?  
 **Answer:** No; the client and server must actually use and enforce it.
 
-**Sources:** Chapter §10; Keycloak Admin Guide; Authlib Web Clients. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §10; Keycloak Admin Guide; Authlib Web Clients. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 10 — Learn from rejection cases
 
@@ -207,7 +207,7 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** Code expired at 10:05; V matches at 10:05:10. Are tokens issued?  
 **Answer:** No.
 
-**Sources:** Chapter §§7, 11; RFC 6749 §5.2. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §§7, 11; RFC 6749 §5.2. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 11 — Prove your implementation with a test vector
 
@@ -227,7 +227,7 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** Should a production app reuse the published RFC verifier?  
 **Answer:** Never; it is a known demonstration value.
 
-**Sources:** Chapter §4; RFC 7636 Appendix B. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §4; RFC 7636 Appendix B. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 12 — Review the full PKCE mental model
 
@@ -248,5 +248,5 @@ No animation, branded visuals or finished presentation is included.
 **Self-check:** Who generates V, and which endpoint first receives V?  
 **Answer:** The OAuth client generates V; only the token endpoint receives it.
 
-**Sources:** Chapter §§1–12; RFC 7636; RFC 9700. [Canonical chapter](../../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §§1–12; RFC 7636; RFC 9700. [Canonical chapter](../docs/10-pkce-generation.md) · [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 

@@ -1,7 +1,7 @@
 # Technical teaching slides — JWT vs JWK vs JWKS
 
 **Format:** 12 detailed text-first slides, not a rendered or branded presentation.  
-**Canonical technical chapter:** [JWT vs JWK vs JWKS](../../docs/15-jwt-vs-jwks-verification.md).  
+**Canonical technical chapter:** [JWT vs JWK vs JWKS](../docs/15-jwt-vs-jwks-verification.md).  
 **Audience:** students, developers and engineers studying authentication and API security.
 
 Every slide includes learner-facing text, teaching notes, a conceptual illustration and a question. Fictional values only.
@@ -26,7 +26,7 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** Does a JWKS decide whether Alice may read Bob's notes?  
 **Answer:** No, the resource API applies its own authorization.
 
-**Sources:** Chapter §§1–2; RFC 7517; RFC 7519. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §§1–2; RFC 7517; RFC 7519. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 
 
 ## Slide 02 — A signed token has three parts
@@ -46,7 +46,7 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** Can decoding establish whether Keycloak issued a JWT?  
 **Answer:** No.
 
-**Sources:** Chapter §3; RFC 7515; RFC 7519. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §3; RFC 7515; RFC 7519. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 
 
 ## Slide 03 — JWS vs JWE
@@ -67,7 +67,7 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** Does a signed JWT automatically hide its contents?  
 **Answer:** No.
 
-**Sources:** Chapter §§2–3; RFC 7515; RFC 7516. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §§2–3; RFC 7515; RFC 7516. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 
 
 ## Slide 04 — Who owns the signing keys?
@@ -87,7 +87,7 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** Should the API download a realm's private key from JWKS?  
 **Answer:** No.
 
-**Sources:** Chapter §4; RFC 7517; Keycloak OIDC docs. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §4; RFC 7517; Keycloak OIDC docs. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 
 
 ## Slide 05 — Don't trust the JWT header
@@ -108,7 +108,7 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** Does a plausible kid prove the signature is valid?  
 **Answer:** No, it only helps select a candidate key.
 
-**Sources:** Chapter §5; RFC 8725. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §5; RFC 8725. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 
 
 ## Slide 06 — What is inside a JWKS?
@@ -129,7 +129,7 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** Is every JWK automatically safe to make public?  
 **Answer:** No.
 
-**Sources:** Chapter §6; RFC 7517. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §6; RFC 7517. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 
 
 ## Slide 07 — Find the trusted key source
@@ -150,7 +150,7 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** Who chooses the allowed JWKS source?  
 **Answer:** The API's trusted issuer configuration.
 
-**Sources:** Chapter §7; RFC 8725; Keycloak OIDC docs. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §7; RFC 8725; Keycloak OIDC docs. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 
 
 ## Slide 08 — Validate more than the signature
@@ -171,7 +171,7 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** What if the signature is valid but aud belongs to another API?  
 **Answer:** Reject the token.
 
-**Sources:** Chapter §§8–9; RFC 8725; RFC 9068. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §§8–9; RFC 8725; RFC 9068. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 
 
 ## Slide 09 — ID token is not an API access token
@@ -191,7 +191,7 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** Can an API accept an ID token because Keycloak signed it?  
 **Answer:** No.
 
-**Sources:** Chapter §9; OIDC Core; RFC 9068. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §9; OIDC Core; RFC 9068. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 
 
 ## Slide 10 — JWKS caching and key rotation
@@ -211,7 +211,7 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** Why keep public key-A after key-B begins signing?  
 **Answer:** To verify older tokens that are still valid.
 
-**Sources:** Chapter §10; Keycloak Admin Guide. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §10; Keycloak Admin Guide. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 
 
 ## Slide 11 — Detect verification shortcuts
@@ -233,7 +233,7 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** Which single JWT header field proves the token trustworthy?  
 **Answer:** None.
 
-**Sources:** Chapter §§5, 7, 9 and 12; RFC 8725. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §§5, 7, 9 and 12; RFC 8725. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 
 
 ## Slide 12 — Safe Keycloak public-key lab
@@ -255,5 +255,5 @@ Every slide includes learner-facing text, teaching notes, a conceptual illustrat
 **Self-check:** Does finding key-A mean any token claiming kid key-A can be accepted?  
 **Answer:** No. Verification and claim checks still follow.
 
-**Sources:** Chapter §§7, 11–12; RFC 7517; Keycloak OIDC docs. [Canonical Chapter 15](../../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** Chapter §§7, 11–12; RFC 7517; Keycloak OIDC docs. [Canonical Chapter 15](../docs/15-jwt-vs-jwks-verification.md) · [RFC 7517](https://www.rfc-editor.org/rfc/rfc7517) · [RFC 8725](https://www.rfc-editor.org/rfc/rfc8725) · [Keycloak OIDC](https://www.keycloak.org/securing-apps/oidc-layers).
 

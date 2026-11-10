@@ -1,7 +1,7 @@
 # Detailed teaching slides — Keycloak deployment and identity continuity
 
 **Audience:** developers and students learning secure Keycloak deployment concepts.  
-**Canonical chapter:** [HTTPS, stable subject IDs, issuer and sessions](../../docs/12-keycloak-deployment-identity-and-sessions.md).  
+**Canonical chapter:** [HTTPS, stable subject IDs, issuer and sessions](../docs/12-keycloak-deployment-identity-and-sessions.md).  
 **Format:** 12 detailed **text-first** educational slides. No rendered deck, branding, social publishing or animation.
 
 Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real operational source is disclosed.
@@ -27,7 +27,7 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** Does a successful developer laptop login prove Keycloak production security?  
 **Answer:** No, it tests only a narrow behavior.
 
-**Sources:** Chapter §1; Keycloak hostname and production docs. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §1; Keycloak hostname and production docs. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Slide 02 — Why localhost can work when VM HTTP fails
 
@@ -47,7 +47,7 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** Is moving PKCE to Authlib an alternative to using HTTPS?  
 **Answer:** No.
 
-**Sources:** Chapter §2; MDN Secure Contexts. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §2; MDN Secure Contexts. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Slide 03 — Exact issuer and public hostname
 
@@ -67,7 +67,7 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** Can the API accept any iss value from a server it can reach?  
 **Answer:** No, issuer is an exact configured trust anchor.
 
-**Sources:** Chapter §3; Keycloak hostname v2. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §3; Keycloak hostname v2. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Slide 04 — JWKS and audience are different settings
 
@@ -87,7 +87,7 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** If a token is correctly signed, is it valid for any API?  
 **Answer:** No, the API must be its intended audience.
 
-**Sources:** Chapter §3; RFC 8725; Keycloak docs. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §3; RFC 8725; Keycloak docs. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Slide 05 — Remote redirect is not a local callback
 
@@ -107,7 +107,7 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** Does localhost on Alice's laptop refer to a remote BFF server?  
 **Answer:** No.
 
-**Sources:** Chapter §4; RFC 8252. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §4; RFC 8252. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Slide 06 — Persistent subject IDs protect ownership
 
@@ -127,7 +127,7 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** Can a recreated Alice account automatically inherit all resources by email match?  
 **Answer:** No.
 
-**Sources:** Chapter §5; OIDC Core; Keycloak database docs. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §5; OIDC Core; Keycloak database docs. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Slide 07 — Restart and recreate are not the same
 
@@ -147,7 +147,7 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** Is exported realm JSON automatically a complete backup of all Keycloak state?  
 **Answer:** No.
 
-**Sources:** Chapter §6; Keycloak import/export guide. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §6; Keycloak import/export guide. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Slide 08 — Startup realm import vs live migration
 
@@ -167,7 +167,7 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** Does --import-realm reapply edits to an already existing realm every restart?  
 **Answer:** No.
 
-**Sources:** Chapter §7; Keycloak import/export. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §7; Keycloak import/export. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Slide 09 — 401, 403 and 404 after identity changes
 
@@ -187,7 +187,7 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** Can 404 indicate an authorization decision?  
 **Answer:** Yes, if policy hides resource existence.
 
-**Sources:** Chapter §8; RFC 9110. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §8; RFC 9110. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Slide 10 — Session state is broader than JWT validity
 
@@ -207,7 +207,7 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** Does deleting app cookie always revoke an unexpired access JWT?  
 **Answer:** No.
 
-**Sources:** Chapter §9; RFC 9700; BFF chapter. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §9; RFC 9700; BFF chapter. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Slide 11 — Protect management and sensitive stores
 
@@ -227,7 +227,7 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** Does a dedicated hostname alone block unwanted admin REST access?  
 **Answer:** No.
 
-**Sources:** Chapter §10; Keycloak hostname and reverse proxy docs. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §10; Keycloak hostname and reverse proxy docs. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Slide 12 — Course acceptance matrix for deployments
 
@@ -247,5 +247,5 @@ Fictional examples: `school-lab`, Alice, `lesson-web`, and `notes-api`. No real 
 **Self-check:** What would you test beyond a simple Keycloak restart?  
 **Answer:** Recreation/restore identity continuity, redirects, issuer and session behavior.
 
-**Sources:** Chapter §§11–12; Keycloak docs. [Canonical chapter](../../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
+**Sources:** Chapter §§11–12; Keycloak docs. [Canonical chapter](../docs/12-keycloak-deployment-identity-and-sessions.md) · [Keycloak Hostname](https://www.keycloak.org/server/hostname) · [Realm Import/Export](https://www.keycloak.org/server/importExport) · [MDN Secure Contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 

@@ -1,7 +1,7 @@
 # Detailed teaching slides — FastAPI/Authlib OAuth BFF security
 
 **Audience:** developers moving from browser OAuth to protected backend token handling.  
-**Canonical chapter:** [OAuth BFF with FastAPI, Authlib and Keycloak](../../docs/13-bff-authlib-browser-session-security.md).  
+**Canonical chapter:** [OAuth BFF with FastAPI, Authlib and Keycloak](../docs/13-bff-authlib-browser-session-security.md).  
 **Format:** 12 detailed text-first slides. No rendered deck, branding, animation, voiceover or publishing copy.
 
 All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
@@ -26,7 +26,7 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** Does importing Authlib alone implement a full BFF?  
 **Answer:** No, you must add session, token management and API mediation.
 
-**Sources:** Chapter §§1–2; RFC 10017 §6.1. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §§1–2; RFC 10017 §6.1. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 02 — Full BFF vs token mediator vs browser client
 
@@ -46,7 +46,7 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** If FastAPI returns access_token to the browser, is it a full BFF?  
 **Answer:** No, that resembles token mediation.
 
-**Sources:** Chapter §2; RFC 10017 §§6.1–6.3. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §2; RFC 10017 §§6.1–6.3. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 03 — Five actors and two credentials
 
@@ -66,7 +66,7 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** Is the BFF's browser session cookie a JWT issued by Keycloak?  
 **Answer:** No, it is a distinct app credential in this example.
 
-**Sources:** Chapter §3; RFC 10017 §6.1. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §3; RFC 10017 §6.1. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 04 — Authorization Code + PKCE login: first half
 
@@ -86,7 +86,7 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** Should the original PKCE verifier appear in the browser authorization URL?  
 **Answer:** No, only the challenge travels first.
 
-**Sources:** Chapter §4; RFC 7636; RFC 9700. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §4; RFC 7636; RFC 9700. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 05 — Authorization Code exchange: second half
 
@@ -106,7 +106,7 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** Which component receives the access/refresh token response?  
 **Answer:** The BFF backend.
 
-**Sources:** Chapter §4; RFC 10017 §6.1.3.1. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §4; RFC 10017 §6.1.3.1. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 06 — Authlib is a protocol library, not a whole architecture
 
@@ -126,7 +126,7 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** If Authlib successfully refreshes a token in a test container, is the integrated backend verified?  
 **Answer:** No, you must test actual integration and all boundaries.
 
-**Sources:** Chapter §5; Authlib Web Clients. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §5; Authlib Web Clients. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 07 — Signed Starlette cookie is readable
 
@@ -146,7 +146,7 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** Can signed request.session securely hide OAuth refresh tokens from the browser?  
 **Answer:** No.
 
-**Sources:** Chapter §5; Starlette SessionMiddleware. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §5; Starlette SessionMiddleware. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 08 — Cookie flags and session fixation
 
@@ -166,7 +166,7 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** Does HttpOnly by itself stop a malicious cross-site request?  
 **Answer:** No; CSRF needs its own defense.
 
-**Sources:** Chapter §6; RFC 10017 §6.1.3.2. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §6; RFC 10017 §6.1.3.2. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 09 — CSRF, CORS and XSS are not synonyms
 
@@ -186,7 +186,7 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** Does a full BFF eliminate XSS or CSRF?  
 **Answer:** No.
 
-**Sources:** Chapter §7; RFC 10017 §6.1.3.3. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §7; RFC 10017 §6.1.3.3. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 10 — Refresh races, revocation and logout
 
@@ -206,7 +206,7 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** Does deleting an app cookie automatically revoke every issued access JWT?  
 **Answer:** Not necessarily.
 
-**Sources:** Chapter §8; RFC 9700; RFC 10017. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §8; RFC 9700; RFC 10017. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 11 — Why localhost HTTP can behave differently
 
@@ -226,7 +226,7 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** Should a developer disable PKCE or use plain HTTP to work around unavailable WebCrypto?  
 **Answer:** No.
 
-**Sources:** Chapter §9; MDN Secure Contexts. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §9; MDN Secure Contexts. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 12 — BFF security acceptance checklist
 
@@ -246,5 +246,5 @@ All examples use imaginary `school-lab`, `lesson-web`, Alice and `notes-api`.
 **Self-check:** What must be verified before calling an application a secure full BFF?  
 **Answer:** All OAuth, session, resource mediation, CSRF and lifecycle boundaries.
 
-**Sources:** Chapter §§10–12; RFC 10017; Authlib. [Chapter](../../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** Chapter §§10–12; RFC 10017; Authlib. [Chapter](../docs/13-bff-authlib-browser-session-security.md) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/) · [Starlette Sessions](https://www.starlette.io/middleware/#sessionmiddleware).
 

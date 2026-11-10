@@ -1,6 +1,6 @@
 # Security, Explained Simply
 
-An open, visual-first handbook for learning **authentication, authorization, OAuth 2.0, OpenID Connect (OIDC), Keycloak, JWTs, and practical API security**.
+An open, visual-first security course for learning **authentication, authorization, OAuth 2.0, OpenID Connect (OIDC), Keycloak, JWTs, and practical API security**.
 
 For students, developers, and curious engineers. Start with plain language, then study diagrams, standards, and hands-on labs. All identities, hosts, and applications in this repository are fictional.
 
@@ -8,10 +8,9 @@ For students, developers, and curious engineers. Start with plain language, then
 
 ## Start learning
 
-Read the [book-style index](book/README.md), follow the [learning roadmap](docs/00-learning-roadmap.md), or use the [glossary](book/glossary.md).
+Start with the [learning roadmap](docs/00-learning-roadmap.md), explore the [slide outlines](slides/README.md), or consult the [plain-English glossary](docs/glossary.md).
 
-**Teaching slides (text-first):** [detailed slide outlines](book/slides/README.md) for all 17 chapters. These are drafts for explanation and future presentations, not rendered decks.
-
+**Teaching slides:** The [slide library](slides/README.md) has 12 detailed text-first outlines per chapter (204 slides total). These are teaching drafts, not rendered presentations.
 
 ### Chapters
 

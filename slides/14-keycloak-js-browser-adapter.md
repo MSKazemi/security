@@ -1,7 +1,7 @@
 # Detailed teaching slides — keycloak-js browser OIDC adapter
 
 **Audience:** browser application developers and students.  
-**Canonical source:** [keycloak-js browser adapter](../../docs/14-keycloak-js-browser-adapter.md).  
+**Canonical source:** [keycloak-js browser adapter](../docs/14-keycloak-js-browser-adapter.md).  
 **Format:** 12 detailed text-first slides; no rendered, branded or animated presentation.
 
 All examples use only fictional classroom users, applications and tokens.
@@ -26,7 +26,7 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** Is the keycloak-js package itself an authentication server?  
 **Answer:** No, it is a browser-side client library.
 
-**Sources:** Chapter §1; Keycloak JS documentation. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §1; Keycloak JS documentation. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 02 — Browser application is the OAuth client
 
@@ -46,7 +46,7 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** Can hiding a client secret in minified JavaScript keep it confidential?  
 **Answer:** No.
 
-**Sources:** Chapter §2; RFC 10017. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §2; RFC 10017. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 03 — Adapter initialization in a fictional app
 
@@ -66,7 +66,7 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** Is clientId an OAuth client secret?  
 **Answer:** No, it identifies the client registration.
 
-**Sources:** Chapter §3; Keycloak JS documentation. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §3; Keycloak JS documentation. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 04 — Authorization Code + PKCE in the browser
 
@@ -86,7 +86,7 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** Does Keycloak return access token directly in the callback URL for standard code flow?  
 **Answer:** No.
 
-**Sources:** Chapter §4; RFC 7636; RFC 9700. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §4; RFC 7636; RFC 9700. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 05 — What does the browser do with tokens?
 
@@ -106,7 +106,7 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** May notes-api accept an ID token signed by the same Keycloak issuer?  
 **Answer:** No, the token purpose is different.
 
-**Sources:** Chapter §§4–5; RFC 8725. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §§4–5; RFC 8725. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 06 — updateToken and refresh failures
 
@@ -126,7 +126,7 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** Does updateToken always succeed because Alice previously logged in?  
 **Answer:** No.
 
-**Sources:** Chapter §5; Keycloak JS documentation. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §5; Keycloak JS documentation. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 07 — login-required vs check-sso
 
@@ -146,7 +146,7 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** Does silent check-sso work identically across all browsers?  
 **Answer:** No.
 
-**Sources:** Chapter §6; Keycloak JS modern browsers section. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §6; Keycloak JS modern browsers section. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 08 — Session-status iframe and logout detection
 
@@ -166,7 +166,7 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** Will the adapter always immediately know about an SSO logout in a different window?  
 **Answer:** No.
 
-**Sources:** Chapter §6; Keycloak JS documentation. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §6; Keycloak JS documentation. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 09 — Web Crypto requires a trusted origin
 
@@ -186,7 +186,7 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** Can bundling keycloak-js locally make http://remote-IP a secure context?  
 **Answer:** No.
 
-**Sources:** Chapter §7; MDN Secure Contexts. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §7; MDN Secure Contexts. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 10 — Browser adapter versus FastAPI/Authlib BFF
 
@@ -206,7 +206,7 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** If Authlib exchanges the code but returns access_token to JS, is it full BFF?  
 **Answer:** No.
 
-**Sources:** Chapter §8; RFC 10017. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §8; RFC 10017. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 11 — CDN is script delivery, not identity
 
@@ -226,7 +226,7 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** Does removing a runtime CDN guarantee secure OAuth cookies or PKCE?  
 **Answer:** No.
 
-**Sources:** Chapter §9; MDN Caching. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §9; MDN Caching. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 12 — Browser adapter security self-check
 
@@ -247,5 +247,5 @@ All examples use only fictional classroom users, applications and tokens.
 **Self-check:** What security property must notes-api still enforce after a successful adapter login?  
 **Answer:** Access-token validation and exact resource authorization.
 
-**Sources:** Chapter §§10–12; Keycloak JS; RFC 10017. [Chapter](../../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §§10–12; Keycloak JS; RFC 10017. [Chapter](../docs/14-keycloak-js-browser-adapter.md) · [Keycloak JavaScript adapter](https://www.keycloak.org/securing-apps/javascript-adapter) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 

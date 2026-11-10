@@ -2,7 +2,7 @@
 
 **Audience:** software developers and students unfamiliar with identity management.  
 **Level:** beginner through intermediate.  
-**Source of truth:** [Keycloak fundamentals](../../docs/01-keycloak-fundamentals.md).  
+**Source of truth:** [Keycloak fundamentals](../docs/01-keycloak-fundamentals.md).  
 **Learning outcome:** identify where users, client registrations, roles, credentials, session cookies and API permissions actually belong.
 
 All names are generic and fictional. This document supplies technical slide text and fuller learning explanations, not narration or animation production scripts.
@@ -26,7 +26,7 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Self-check:** Does Keycloak run the application's business logic? **Not simply by hosting the client's registration.**
 
-**Sources:** [Chapter §1](../../docs/01-keycloak-fundamentals.md); [Keycloak docs](https://www.keycloak.org/documentation).
+**Sources:** [Chapter §1](../docs/01-keycloak-fundamentals.md); [Keycloak docs](https://www.keycloak.org/documentation).
 
 ## Slide 02 — Identify four actors
 
@@ -43,11 +43,11 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Teaching explanation:** Alice interacts with a frontend. The app initiates login at Keycloak, which authenticates Alice under realm policy. After credentials are issued, the application may contact an API. The API determines whether the request may access the specific notes resource. The browser's role depends on whether the architecture is browser-only or backend-managed.
 
-**Diagram/example:** Use the [chapter §1 relationship diagram](../../docs/01-keycloak-fundamentals.md).
+**Diagram/example:** Use the [chapter §1 relationship diagram](../docs/01-keycloak-fundamentals.md).
 
 **Self-check:** Who must validate access permission for a particular notebook? **The protected resource API.**
 
-**Sources:** [Chapter §1](../../docs/01-keycloak-fundamentals.md); [OAuth roles RFC 6749 §1.1](https://www.rfc-editor.org/rfc/rfc6749.html#section-1.1).
+**Sources:** [Chapter §1](../docs/01-keycloak-fundamentals.md); [OAuth roles RFC 6749 §1.1](https://www.rfc-editor.org/rfc/rfc6749.html#section-1.1).
 
 ## Slide 03 — What is a realm?
 
@@ -65,7 +65,7 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Self-check:** Is a realm the same as an API endpoint? **No, although the realm has issuer-related endpoints.**
 
-**Sources:** [Chapter §2](../../docs/01-keycloak-fundamentals.md); [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** [Chapter §2](../docs/01-keycloak-fundamentals.md); [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 04 — Users, groups and roles
 
@@ -84,7 +84,7 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Self-check:** Does the presence of `reader` always authorize reading every object? **No.**
 
-**Sources:** [Chapter §§2, 7](../../docs/01-keycloak-fundamentals.md); [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** [Chapter §§2, 7](../docs/01-keycloak-fundamentals.md); [Keycloak Admin Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 05 — Running client vs Keycloak registration
 
@@ -103,7 +103,7 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Self-check:** Does creating the client in Keycloak launch the app? **No.**
 
-**Sources:** [Chapter §3](../../docs/01-keycloak-fundamentals.md); [Keycloak OIDC integration](https://www.keycloak.org/securing-apps/oidc-layers).
+**Sources:** [Chapter §3](../docs/01-keycloak-fundamentals.md); [Keycloak OIDC integration](https://www.keycloak.org/securing-apps/oidc-layers).
 
 ## Slide 06 — What does Authlib do?
 
@@ -118,11 +118,11 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Teaching explanation:** In a backend application, Authlib helps implement OAuth/OIDC redirect and token operations. The application initiates the authorization request and handles the callback. Calling `oauth.register(...)` configures local client code; it does not contact Keycloak's administration interface to create a registration. Actual secure deployment needs configured redirect URIs, session protection, client authentication where appropriate and correct token storage.
 
-**Diagram/example:** Use the [chapter §3 app/Keycloak diagram](../../docs/01-keycloak-fundamentals.md).
+**Diagram/example:** Use the [chapter §3 app/Keycloak diagram](../docs/01-keycloak-fundamentals.md).
 
 **Self-check:** Does Authlib automatically keep all OAuth tokens on the server? **No; storage is an application design decision.**
 
-**Sources:** [Chapter §4](../../docs/01-keycloak-fundamentals.md); [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/).
+**Sources:** [Chapter §4](../docs/01-keycloak-fundamentals.md); [Authlib Web Clients](https://docs.authlib.org/en/latest/oauth2/client/web/).
 
 ## Slide 07 — Public vs confidential clients
 
@@ -141,7 +141,7 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Self-check:** Can an SPA safely hide an OAuth client secret in JavaScript? **No.**
 
-**Sources:** [Chapter §6](../../docs/01-keycloak-fundamentals.md); [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** [Chapter §6](../docs/01-keycloak-fundamentals.md); [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 08 — Browser SPA vs Backend-for-Frontend
 
@@ -160,7 +160,7 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Self-check:** Does a full BFF typically send access tokens to browser JavaScript? **No.**
 
-**Sources:** [Chapter §5](../../docs/01-keycloak-fundamentals.md).
+**Sources:** [Chapter §5](../docs/01-keycloak-fundamentals.md).
 
 ## Slide 09 — Signed cookie vs server-side token storage
 
@@ -178,7 +178,7 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Self-check:** Does `request.session` automatically imply backend-only storage? **No.**
 
-**Sources:** [Chapter §5](../../docs/01-keycloak-fundamentals.md); [Starlette SessionMiddleware](https://www.starlette.io/middleware/#sessionmiddleware).
+**Sources:** [Chapter §5](../docs/01-keycloak-fundamentals.md); [Starlette SessionMiddleware](https://www.starlette.io/middleware/#sessionmiddleware).
 
 ## Slide 10 — API validates and authorizes separately
 
@@ -197,7 +197,7 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Self-check:** Is a valid signature sufficient to authorize the action? **No.**
 
-**Sources:** [Chapter §7](../../docs/01-keycloak-fundamentals.md); [OAuth security RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** [Chapter §7](../docs/01-keycloak-fundamentals.md); [OAuth security RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 11 — Why are some diagram lines dashed?
 
@@ -216,7 +216,7 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Self-check:** Does a dashed arrow indicate failed authentication? **No.**
 
-**Sources:** [Chapter §8](../../docs/01-keycloak-fundamentals.md); [Mermaid sequence docs](https://mermaid.js.org/syntax/sequenceDiagram.html).
+**Sources:** [Chapter §8](../docs/01-keycloak-fundamentals.md); [Mermaid sequence docs](https://mermaid.js.org/syntax/sequenceDiagram.html).
 
 ## Slide 12 — Keycloak mental model and review questions
 
@@ -235,4 +235,4 @@ All names are generic and fictional. This document supplies technical slide text
 
 **Self-check:** Explain where Authlib runs, where a `client_id` is registered, where a refresh token belongs, and where object permission is enforced.
 
-**Sources:** [Full Keycloak fundamentals chapter](../../docs/01-keycloak-fundamentals.md); [Keycloak docs](https://www.keycloak.org/documentation).
+**Sources:** [Full Keycloak fundamentals chapter](../docs/01-keycloak-fundamentals.md); [Keycloak docs](https://www.keycloak.org/documentation).

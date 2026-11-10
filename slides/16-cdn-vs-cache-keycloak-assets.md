@@ -1,7 +1,7 @@
 # Detailed teaching slides — CDN, HTTP caching and OAuth sessions
 
 **Audience:** developers and students learning web security infrastructure.  
-**Canonical technical chapter:** [CDN, caches and protected sessions](../../docs/16-cdn-vs-cache-keycloak-assets.md).  
+**Canonical technical chapter:** [CDN, caches and protected sessions](../docs/16-cdn-vs-cache-keycloak-assets.md).  
 **Format:** 12 detailed text-first slides with explanations and self-checks; no branded slide assets, videos, animation or social copy.
 
 All URLs and actors are fictional.
@@ -26,7 +26,7 @@ All URLs and actors are fictional.
 **Self-check:** Can a CDN issue Alice's OIDC ID token merely by serving keycloak-js?  
 **Answer:** No.
 
-**Sources:** Chapter §§1–2; MDN CDN; Keycloak docs. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §§1–2; MDN CDN; Keycloak docs. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 02 — A CDN and a browser cache can both hold a copy
 
@@ -46,7 +46,7 @@ All URLs and actors are fictional.
 **Self-check:** Does switching to local static hosting disable the browser's HTTP cache?  
 **Answer:** No.
 
-**Sources:** Chapter §§2–3; MDN HTTP caching. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §§2–3; MDN HTTP caching. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 03 — Five stores, five different security models
 
@@ -67,7 +67,7 @@ All URLs and actors are fictional.
 **Self-check:** Is an application session cookie a public JavaScript cache?  
 **Answer:** No.
 
-**Sources:** Chapter §§1 and 8; RFC 10017. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §§1 and 8; RFC 10017. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 04 — Cache-Control public and immutable
 
@@ -87,7 +87,7 @@ All URLs and actors are fictional.
 **Self-check:** Should a frequently overwritten app.js use year-long immutable caching?  
 **Answer:** No.
 
-**Sources:** Chapter §4; MDN Cache-Control. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §4; MDN Cache-Control. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 05 — No-cache, private, and no-store are different
 
@@ -107,7 +107,7 @@ All URLs and actors are fictional.
 **Self-check:** Does no-cache mean the response can never be stored?  
 **Answer:** No.
 
-**Sources:** Chapter §4; MDN HTTP caching. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §4; MDN HTTP caching. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 06 — Separate public static from private notebook data
 
@@ -127,7 +127,7 @@ All URLs and actors are fictional.
 **Self-check:** Can Alice's personalized notes be served from a shared public edge cache under this design?  
 **Answer:** No.
 
-**Sources:** Chapter §5; MDN Cache-Control; RFC 10017. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §5; MDN Cache-Control; RFC 10017. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 07 — Follow the two request paths end to end
 
@@ -147,7 +147,7 @@ All URLs and actors are fictional.
 **Self-check:** Is the BFF session store the source of JavaScript files?  
 **Answer:** Not normally; it stores authenticated session state.
 
-**Sources:** Chapter §6; RFC 10017. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §6; RFC 10017. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 08 — Trusted JWKS caches are another category
 
@@ -167,7 +167,7 @@ All URLs and actors are fictional.
 **Self-check:** Could a JWT supplied jku redirect the API to any new key server?  
 **Answer:** No.
 
-**Sources:** Chapter §7; RFC 8725. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §7; RFC 8725. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 09 — Browser cookie is a sensitive credential
 
@@ -187,7 +187,7 @@ All URLs and actors are fictional.
 **Self-check:** Is a signed Starlette session cookie an encrypted server token vault?  
 **Answer:** No.
 
-**Sources:** Chapter §8; Starlette middleware; RFC 10017. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §8; Starlette middleware; RFC 10017. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 10 — CDN choice does not fix insecure origins
 
@@ -207,7 +207,7 @@ All URLs and actors are fictional.
 **Self-check:** Will bundling keycloak-js make an ordinary HTTP VM-IP page secure?  
 **Answer:** No.
 
-**Sources:** Chapter §9; MDN Secure Contexts. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §9; MDN Secure Contexts. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 11 — External CDN versus local build: risks
 
@@ -227,7 +227,7 @@ All URLs and actors are fictional.
 **Self-check:** Does a local JS bundle automatically eliminate every supply-chain risk?  
 **Answer:** No.
 
-**Sources:** Chapter §10; MDN CDN. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §10; MDN CDN. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 
 ## Slide 12 — DevTools experiment without leaking credentials
 
@@ -248,5 +248,5 @@ All URLs and actors are fictional.
 **Self-check:** If a response says no-cache, may it still be stored and revalidated?  
 **Answer:** Yes.
 
-**Sources:** Chapter §§11–12; MDN Caching. [Chapter](../../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
+**Sources:** Chapter §§11–12; MDN Caching. [Chapter](../docs/16-cdn-vs-cache-keycloak-assets.md) · [MDN HTTP Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017).
 

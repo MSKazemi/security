@@ -112,7 +112,7 @@ Use public standards, the open-source Keycloak distribution and a **disposable l
 
 A safe study session:
 
-1. **Read** a chapter and its [detailed teaching-slide outline](../book/slides/README.md).
+1. **Read** a chapter and its [detailed teaching-slide outline](../slides/README.md).
 2. **Draw** the sequence yourself, including where credentials travel.
 3. **Predict** a failure response before looking at the explanation.
 4. **Experiment** with a disposable local realm or offline sample. Never use real organization accounts, signing keys or live bearer tokens.
@@ -174,6 +174,6 @@ The lab documentation is a learning path, not a claim that local infrastructure 
 - [OpenID Connect Core](https://openid.net/specs/openid-connect-core-1_0.html)
 - [Keycloak Documentation](https://www.keycloak.org/documentation)
 
-Continue with [Keycloak fundamentals](01-keycloak-fundamentals.md), then use the [book index](../book/README.md) to revisit any module.
+Continue with [Keycloak fundamentals](01-keycloak-fundamentals.md), then use the [slide library](../slides/README.md) to revisit any module.
 
 *Generic technical education only. This chapter deliberately excludes personal study progress, private conversations, operating environments and publication strategy.*

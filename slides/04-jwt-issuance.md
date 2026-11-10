@@ -1,7 +1,7 @@
 # Teaching slides — How Keycloak issues signed JWTs
 
 **Audience:** beginner to intermediate developers learning Keycloak.  
-**Canonical source:** [How Keycloak issues a signed JWT](../../docs/04-jwt-issuance.md).  
+**Canonical source:** [How Keycloak issues a signed JWT](../docs/04-jwt-issuance.md).  
 **Output:** **12 text-first educational slides** for future visual design. No branding, video, animation, soundtrack, or publishing plan.
 
 Each slide includes a learning outcome, concise visible copy, a full explanation, a diagram or example, and a self-check. Fictional classroom identities only.
@@ -25,7 +25,7 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** Who creates and signs Keycloak's access JWT?  
 **Answer:** Keycloak after an allowed token grant.
 
-**Sources:** Chapter §§1–2; Keycloak OIDC docs. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §§1–2; Keycloak OIDC docs. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 
 ## Slide 02 — Creating a realm is not issuing a token
 
@@ -44,7 +44,7 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** Does a realm's key creation automatically issue Alice's access token?  
 **Answer:** No.
 
-**Sources:** Chapter §1; Keycloak OIDC docs. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §1; Keycloak OIDC docs. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 
 ## Slide 03 — Authorization Code + PKCE timing
 
@@ -63,7 +63,7 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** Where is the authorization code redeemed?  
 **Answer:** At the authorization server's token endpoint.
 
-**Sources:** Chapter §1; RFC 6749; RFC 7636. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §1; RFC 6749; RFC 7636. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 
 ## Slide 04 — Device Flow begins with codes, not JWTs
 
@@ -82,7 +82,7 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** Can the CLI use device_code as Authorization: Bearer?  
 **Answer:** No.
 
-**Sources:** Chapter §§1, 8; RFC 8628. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §§1, 8; RFC 8628. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 
 ## Slide 05 — Other grants can also issue tokens
 
@@ -101,7 +101,7 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** Does Client Credentials require a browser login for Alice?  
 **Answer:** No.
 
-**Sources:** Chapter §1; RFC 6749; Keycloak documentation. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §1; RFC 6749; Keycloak documentation. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 
 ## Slide 06 — Where do signed JWT claims come from?
 
@@ -120,7 +120,7 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** Does every claim need a custom protocol mapper?  
 **Answer:** No, many standard values are built in.
 
-**Sources:** Chapter §§3–4; Keycloak Admin Guide. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §§3–4; Keycloak Admin Guide. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 
 ## Slide 07 — A signed JWT's three components
 
@@ -139,7 +139,7 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** Does Base64URL make the payload secret?  
 **Answer:** No.
 
-**Sources:** Chapter §5; RFC 7519; RFC 7515. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §5; RFC 7519; RFC 7515. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 
 ## Slide 08 — An illustrative token payload
 
@@ -159,7 +159,7 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** Does notes:read automatically grant Bob's private notebook?  
 **Answer:** No.
 
-**Sources:** Chapter §§5, 10; RFC 9068; Keycloak docs. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §§5, 10; RFC 9068; Keycloak docs. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 
 ## Slide 09 — Private signing key vs public JWKS
 
@@ -178,7 +178,7 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** Should the client application store Keycloak's private signing key?  
 **Answer:** No.
 
-**Sources:** Chapter §§6–7; RFC 7517; RFC 8725. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §§6–7; RFC 7517; RFC 8725. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 
 ## Slide 10 — Different credentials, different destinations
 
@@ -198,7 +198,7 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** May notes-api accept an ID token as Bearer access?  
 **Answer:** No.
 
-**Sources:** Chapter §9; OIDC Core; RFC 6749. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §9; OIDC Core; RFC 6749. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 
 ## Slide 11 — Failure cases: issuance and use are separate
 
@@ -217,7 +217,7 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** Can a valid signature overcome a wrong API audience?  
 **Answer:** No.
 
-**Sources:** Chapter §10; RFC 9700. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §10; RFC 9700. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 
 ## Slide 12 — Explain issuance in one sentence
 
@@ -237,5 +237,5 @@ Each slide includes a learning outcome, concise visible copy, a full explanation
 **Self-check:** Who authorizes reading a specific notebook after token issuance?  
 **Answer:** The protected API.
 
-**Sources:** Chapter §§1–11; Keycloak OIDC docs. [Canonical chapter](../../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
+**Sources:** Chapter §§1–11; Keycloak OIDC docs. [Canonical chapter](../docs/04-jwt-issuance.md) · [Keycloak OIDC documentation](https://www.keycloak.org/securing-apps/oidc-layers) · [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519).
 

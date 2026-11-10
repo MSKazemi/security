@@ -2,7 +2,7 @@
 
 **Audience:** beginner and intermediate software engineers.  
 **Content format:** 12 detailed, text-first slides; no rendered deck, branding, animation or platform operations.  
-**Canonical chapter:** [API access-token validation](../../docs/06-api-token-validation.md).
+**Canonical chapter:** [API access-token validation](../docs/06-api-token-validation.md).
 
 All users and service names in the examples are fictional.
 
@@ -25,7 +25,7 @@ All users and service names in the examples are fictional.
 **Self-check:** Can Alice read Bob's private notebook after merely logging in?  
 **Answer:** Not without a resource-level authorization rule.
 
-**Sources:** Chapter §1; OAuth Bearer RFC 6750. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §1; OAuth Bearer RFC 6750. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 
 ## Slide 02 — Who sends the access token?
 
@@ -45,7 +45,7 @@ All users and service names in the examples are fictional.
 **Self-check:** Is the API responsible for validating its received access token?  
 **Answer:** Yes, the protected resource must do its own checks.
 
-**Sources:** Chapter §2; OAuth framework RFC 6749. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §2; OAuth framework RFC 6749. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 
 ## Slide 03 — What must a JWT validator verify?
 
@@ -66,7 +66,7 @@ All users and service names in the examples are fictional.
 **Self-check:** Is a correctly signed JWT automatically acceptable to every API?  
 **Answer:** No; audience, purpose and resource policy must also match.
 
-**Sources:** Chapter §3; RFC 8725; RFC 9068. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §3; RFC 8725; RFC 9068. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 
 ## Slide 04 — Wrong audience, right signature
 
@@ -86,7 +86,7 @@ All users and service names in the examples are fictional.
 **Self-check:** Should notes-api accept a token whose aud contains only billing-api?  
 **Answer:** No, it is not the intended recipient.
 
-**Sources:** Chapter §4; RFC 8725 §3.9; RFC 9068. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §4; RFC 8725 §3.9; RFC 9068. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 
 ## Slide 05 — ID token versus API access token
 
@@ -106,7 +106,7 @@ All users and service names in the examples are fictional.
 **Self-check:** Can notes-api accept an ID token just because Keycloak signed it?  
 **Answer:** No, token purpose and intended audience differ.
 
-**Sources:** Chapter §5; OIDC Core; RFC 9068. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §5; OIDC Core; RFC 9068. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 
 ## Slide 06 — RFC 9068 is a specific token profile
 
@@ -126,7 +126,7 @@ All users and service names in the examples are fictional.
 **Self-check:** Must every JWT from every Keycloak installation declare at+jwt?  
 **Answer:** No. Only the specific RFC 9068 profile requires it.
 
-**Sources:** Chapter §5; RFC 9068 §4. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §5; RFC 9068 §4. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 
 ## Slide 07 — Trust the issuer's JWKS
 
@@ -146,7 +146,7 @@ All users and service names in the examples are fictional.
 **Self-check:** May an attacker-controlled kid tell the API to trust a new host?  
 **Answer:** No, candidate keys must come from trusted issuer configuration.
 
-**Sources:** Chapter §6; RFC 8725; RFC 7517. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §6; RFC 8725; RFC 7517. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 
 ## Slide 08 — Opaque access tokens and introspection
 
@@ -166,7 +166,7 @@ All users and service names in the examples are fictional.
 **Self-check:** Is active=true sufficient to read any notebook?  
 **Answer:** No. Resource-level policy remains essential.
 
-**Sources:** Chapter §7; RFC 7662. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §7; RFC 7662. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 
 ## Slide 09 — 401 and 403 are different
 
@@ -186,7 +186,7 @@ All users and service names in the examples are fictional.
 **Self-check:** What is typical when a valid token cannot read Bob's private notes?  
 **Answer:** 403 Forbidden, after validation and policy checks.
 
-**Sources:** Chapter §8; RFC 6750 §3. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §8; RFC 6750 §3. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 
 ## Slide 10 — Delayed actions and stale roles
 
@@ -206,7 +206,7 @@ All users and service names in the examples are fictional.
 **Self-check:** Can a signature check alone reveal a newly revoked role?  
 **Answer:** Not necessarily; current policy/freshness checks may be required.
 
-**Sources:** Chapter §9; RFC 7662; RFC 9700. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §9; RFC 7662; RFC 9700. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 
 ## Slide 11 — Security-focused API tests
 
@@ -227,7 +227,7 @@ All users and service names in the examples are fictional.
 **Self-check:** What should happen when JWKS cannot establish a valid key?  
 **Answer:** Reject rather than skipping signature verification.
 
-**Sources:** Chapter §10; RFC 6750; RFC 8725. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §10; RFC 6750; RFC 8725. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 
 ## Slide 12 — Complete acceptance mental model
 
@@ -247,5 +247,5 @@ All users and service names in the examples are fictional.
 **Self-check:** Why is 'signed by Keycloak' insufficient for access?  
 **Answer:** The API must still be intended audience and the resource action must be authorized.
 
-**Sources:** Chapter §§1–12; RFC 6750; RFC 7662; RFC 8725. [Canonical chapter](../../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
+**Sources:** Chapter §§1–12; RFC 6750; RFC 7662; RFC 8725. [Canonical chapter](../docs/06-api-token-validation.md) · [Bearer RFC 6750](https://www.rfc-editor.org/rfc/rfc6750) · [Introspection RFC 7662](https://www.rfc-editor.org/rfc/rfc7662) · [JWT BCP RFC 8725](https://www.rfc-editor.org/rfc/rfc8725).
 

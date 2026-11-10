@@ -1,7 +1,7 @@
 # Technical teaching slides — authorization code vs access token
 
 **Format:** text-first technical slides.  
-**Canonical chapter:** [Authorization code vs access token](../../docs/11-authorization-code-vs-access-token.md)  
+**Canonical chapter:** [Authorization code vs access token](../docs/11-authorization-code-vs-access-token.md)  
 **Audience:** beginner to intermediate developers. **Slides:** 12.
 
 This is detailed educational text, **not** a rendered slide deck or a media production script. Fictional examples only.
@@ -25,7 +25,7 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** Can the code be submitted to notes-api as Bearer?  
 **Answer:** No; it belongs at Keycloak's token endpoint.
 
-**Sources:** Chapter §§1–2; RFC 6749 §§4.1.2–4.1.3. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §§1–2; RFC 6749 §§4.1.2–4.1.3. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 02 — Who is involved in an authorization-code login?
 
@@ -45,7 +45,7 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** Does Keycloak's client registration deploy the application?  
 **Answer:** No, it only configures its identity-protocol relationship.
 
-**Sources:** Chapter §§3–4; RFC 6749 §1.1. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §§3–4; RFC 6749 §1.1. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 03 — Where does the code appear?
 
@@ -65,7 +65,7 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** Is a code a JWT that should be decoded?  
 **Answer:** Treat it as opaque; its purpose is single-use exchange.
 
-**Sources:** Chapter §§2, 4; RFC 6749 §4.1.2. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §§2, 4; RFC 6749 §4.1.2. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 04 — How does the client redeem the code?
 
@@ -85,7 +85,7 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** Does the browser send the access token to the API before token redemption?  
 **Answer:** Not in the demonstrated backend code flow.
 
-**Sources:** Chapter §§4–5; RFC 6749 §4.1.3; RFC 7636. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §§4–5; RFC 6749 §4.1.3; RFC 7636. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 05 — Where does the access token go?
 
@@ -104,7 +104,7 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** Can an ID token replace the API access token?  
 **Answer:** No. OIDC ID tokens have a different purpose and recipient.
 
-**Sources:** Chapter §§4, 8; OIDC Core; RFC 9700. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §§4, 8; OIDC Core; RFC 9700. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 06 — A complete BFF login sequence
 
@@ -125,7 +125,7 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** Are BFF access tokens automatically stored server-side by every web framework?  
 **Answer:** No; server-side storage is a separate design requirement.
 
-**Sources:** Chapter §4; Keycloak OIDC docs; RFC 9700. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §4; Keycloak OIDC docs; RFC 9700. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 07 — Why are codes single-use and short-lived?
 
@@ -145,7 +145,7 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** Can PKCE turn an expired authorization code valid again?  
 **Answer:** No; proof and validity are independent checks.
 
-**Sources:** Chapter §§2, 6; RFC 6749 §4.1.2. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §§2, 6; RFC 6749 §4.1.2. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 08 — What exactly does PKCE add?
 
@@ -165,7 +165,7 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** Is the verifier supposed to be part of the initial browser URL?  
 **Answer:** No. Send only the derived challenge during authorization.
 
-**Sources:** Chapter §7; RFC 7636 §§4.1–4.6. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §7; RFC 7636 §§4.1–4.6. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 09 — What can cause invalid_grant?
 
@@ -185,7 +185,7 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** An expired code has a matching verifier. Should tokens issue?  
 **Answer:** No, reject the invalid grant.
 
-**Sources:** Chapter §6; RFC 6749 §5.2; RFC 7636. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §6; RFC 6749 §5.2; RFC 7636. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 10 — Four different credentials
 
@@ -205,7 +205,7 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** Does Client Credentials require a user's authorization code?  
 **Answer:** No; it is a separate grant.
 
-**Sources:** Chapter §8; RFC 6749; OIDC Core. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §8; RFC 6749; OIDC Core. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 11 — Security checks after token issuance
 
@@ -225,7 +225,7 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** Alice has a valid access token. May she read Bob's notebook?  
 **Answer:** Only if the API explicitly authorizes it.
 
-**Sources:** Chapter §9; RFC 9700. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §9; RFC 9700. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 
 ## Slide 12 — Review: choose the correct recipient
 
@@ -245,5 +245,5 @@ This is detailed educational text, **not** a rendered slide deck or a media prod
 **Self-check:** What should happen if the API receives the authorization code as a Bearer credential?  
 **Answer:** Reject it; the code is not a resource-server access token.
 
-**Sources:** Chapter §§3–11; RFC 6749; RFC 9700. [Canonical chapter](../../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
+**Sources:** Chapter §§3–11; RFC 6749; RFC 9700. [Canonical chapter](../docs/11-authorization-code-vs-access-token.md) · [OAuth 2.0 RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) · [PKCE RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) · [OAuth Security BCP RFC 9700](https://www.rfc-editor.org/rfc/rfc9700).
 

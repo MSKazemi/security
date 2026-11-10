@@ -1,7 +1,7 @@
 # Teaching slides — Choosing OAuth and OIDC flows
 
 **Audience:** engineering students and application developers.  
-**Canonical source:** [Flow selection chapter](../../docs/02-authentication-flows.md).  
+**Canonical source:** [Flow selection chapter](../docs/02-authentication-flows.md).  
 **Format:** 12 detailed text-first slides, not a rendered deck, storyboard or social script. All examples fictional.
 
 ---
@@ -23,7 +23,7 @@
 **Self-check:** Does choosing Device Flow grant permission to all API resources?  
 **Answer:** No; grants and resource authorization serve different purposes.
 
-**Sources:** Chapter §§1–2; RFC 6749. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §§1–2; RFC 6749. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 02 — Three questions before choosing
 
@@ -42,7 +42,7 @@
 **Self-check:** What flow is natural for a backend service acting as itself?  
 **Answer:** Client Credentials.
 
-**Sources:** Chapter §1; RFC 9700; RFC 8252. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §1; RFC 9700; RFC 8252. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 03 — Four choices, one comparison
 
@@ -62,7 +62,7 @@
 **Self-check:** Which grant doesn't require Alice to sign in interactively?  
 **Answer:** Client Credentials.
 
-**Sources:** Chapter §2; RFC 6749; RFC 8628. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §2; RFC 6749; RFC 8628. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 04 — Code flow: browser and client have different jobs
 
@@ -82,7 +82,7 @@
 **Self-check:** Does the browser's callback itself contain the API access token in code flow?  
 **Answer:** No, it contains a code for later exchange.
 
-**Sources:** Chapter §3; RFC 6749 §4.1. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §3; RFC 6749 §4.1. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 05 — PKCE protects code redemption
 
@@ -102,7 +102,7 @@
 **Self-check:** Can PKCE replace a confidential client's authentication method?  
 **Answer:** No.
 
-**Sources:** Chapter §3; RFC 7636; RFC 9700. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §3; RFC 7636; RFC 9700. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 06 — BFF, token mediator and browser OAuth
 
@@ -121,7 +121,7 @@
 **Self-check:** Do all browser apps keep OAuth tokens server-side?  
 **Answer:** No, only some architectures such as a full BFF.
 
-**Sources:** Chapter §4; RFC 10017. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §4; RFC 10017. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 07 — Native CLI with browser access
 
@@ -141,7 +141,7 @@
 **Self-check:** Is embedding a secret in a CLI binary equivalent to confidential client authentication?  
 **Answer:** No.
 
-**Sources:** Chapter §5; RFC 8252. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §5; RFC 8252. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 08 — When is Device Flow justified?
 
@@ -161,7 +161,7 @@
 **Self-check:** If a CLI can use the system browser, must it still use Device Flow?  
 **Answer:** No.
 
-**Sources:** Chapter §§6, 9; RFC 8628; RFC 10027. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §§6, 9; RFC 8628; RFC 10027. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 09 — Client Credentials has no human login
 
@@ -181,7 +181,7 @@
 **Self-check:** Does a Client Credentials token prove Alice logged in?  
 **Answer:** No.
 
-**Sources:** Chapter §7; RFC 6749 §4.4; RFC 9700. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §7; RFC 6749 §4.4; RFC 9700. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 10 — Two historical flows to avoid
 
@@ -201,7 +201,7 @@
 **Self-check:** Is the password grant acceptable because Keycloak has a Direct Access Grants option?  
 **Answer:** No, RFC 9700 says it MUST NOT be used.
 
-**Sources:** Chapter §8; RFC 9700; RFC 10017. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §8; RFC 9700; RFC 10017. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 11 — Flow security continues after issuance
 
@@ -221,7 +221,7 @@
 **Self-check:** Can a correctly signed token for billing-api authorize notes-api?  
 **Answer:** No, wrong audience.
 
-**Sources:** Chapter §§3, 9, 11; RFC 9700. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §§3, 9, 11; RFC 9700. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 
 ## Slide 12 — Pick the grant in four scenarios
 
@@ -241,5 +241,5 @@
 **Self-check:** What should be checked even after selecting the correct grant?  
 **Answer:** The access token and the exact resource policy.
 
-**Sources:** Chapter §§1–12; RFC 9700; RFC 10027. [Chapter](../../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
+**Sources:** Chapter §§1–12; RFC 9700; RFC 10027. [Chapter](../docs/02-authentication-flows.md) · [RFC 9700](https://www.rfc-editor.org/rfc/rfc9700) · [RFC 10017](https://www.rfc-editor.org/rfc/rfc10017) · [RFC 10027](https://www.rfc-editor.org/rfc/rfc10027).
 

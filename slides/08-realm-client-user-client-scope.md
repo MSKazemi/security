@@ -1,7 +1,7 @@
 # Technical slide outline — Realm, User, Client and Client Scope
 
 **Audience:** beginners and engineers learning Keycloak configuration.  
-**Canonical chapter:** [Keycloak realm, user, client and client scope](../../docs/08-realm-client-user-client-scope.md).  
+**Canonical chapter:** [Keycloak realm, user, client and client scope](../docs/08-realm-client-user-client-scope.md).  
 **Format:** 12 text-first educational slides; no animation, brand palette, platform-specific text or rendered deck.  
 **Outcome:** identify each Keycloak object, explain why scopes affect claims, and distinguish token contents from API authorization.
 
@@ -27,7 +27,7 @@ All example accounts, clients and realms are fictional.
 **Self-check:** Is a client scope another user?  
 **Answer:** No. It is configuration affecting token issuance.
 
-**Sources:** Chapter §§1–2; Keycloak Server Administration Guide. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §§1–2; Keycloak Server Administration Guide. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 02 — Where the objects live
 
@@ -46,7 +46,7 @@ A resource API runs separately
 **Self-check:** Does creating a notes-api client registration deploy an API?  
 **Answer:** No.
 
-**Sources:** Chapter §2; Keycloak Server Administration Guide. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §2; Keycloak Server Administration Guide. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 03 — Who is Alice inside Keycloak?
 
@@ -66,7 +66,7 @@ Claims are selected information
 **Self-check:** Does a user having an email mean every access token needs the email?  
 **Answer:** No. Minimize claims.
 
-**Sources:** Chapter §3 and §11; Keycloak Admin Guide. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §3 and §11; Keycloak Admin Guide. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 04 — Client code versus client registration
 
@@ -86,7 +86,7 @@ Registration ≠ deployment
 **Self-check:** Does registering lesson-web in Keycloak launch FastAPI?  
 **Answer:** No.
 
-**Sources:** Chapter §4; Keycloak OIDC documentation. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [OIDC Core](https://openid.net/specs/openid-connect-core-1_0.html).
+**Sources:** Chapter §4; Keycloak OIDC documentation. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [OIDC Core](https://openid.net/specs/openid-connect-core-1_0.html).
 
 ## Slide 05 — Why is scope confusing?
 
@@ -106,7 +106,7 @@ API policy = concrete permission
 **Self-check:** Does the email scope grant permission to read emails or notebooks?  
 **Answer:** No. It is not a blanket resource authorization.
 
-**Sources:** Chapter §§5, 8 and 11; Keycloak Admin Guide. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §§5, 8 and 11; Keycloak Admin Guide. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 06 — Default client scopes
 
@@ -125,7 +125,7 @@ Mapper configuration still determines claims
 **Self-check:** Must the client explicitly request profile if it is assigned as default?  
 **Answer:** No, not to activate its default mappings.
 
-**Sources:** Chapter §6; Keycloak Admin Guide, default client scopes. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §6; Keycloak Admin Guide, default client scopes. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 07 — Optional client scopes
 
@@ -145,7 +145,7 @@ Claims depend on mappers
 **Self-check:** With only an optional email mapper, does scope=openid guarantee an email claim?  
 **Answer:** No; the optional scope was not requested.
 
-**Sources:** Chapter §6; Keycloak Admin Guide, optional client scopes. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §6; Keycloak Admin Guide, optional client scopes. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 08 — What is a dedicated client scope?
 
@@ -165,7 +165,7 @@ Not a separate reusable REST/storage object
 **Self-check:** Can a second client reuse lesson-web's dedicated scope by linking it?  
 **Answer:** No.
 
-**Sources:** Chapter §6; Keycloak Admin Guide, dedicated client scope. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §6; Keycloak Admin Guide, dedicated client scope. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 09 — Protocol mappers choose emitted claims
 
@@ -185,7 +185,7 @@ Scope policy controls eligibility
 **Self-check:** If a mapper emits 'reader', does that alone mean Alice can read every notebook?  
 **Answer:** No; object-level policy remains separate.
 
-**Sources:** Chapter §7; Keycloak Admin Guide, protocol mappers. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §7; Keycloak Admin Guide, protocol mappers. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 10 — Roles, least privilege and token audience
 
@@ -205,7 +205,7 @@ API checks audience and object permission
 **Self-check:** Does a valid teacher role guarantee access to every tenant's documents?  
 **Answer:** No; the API's resource/tenant policy decides.
 
-**Sources:** Chapter §§8, 11; Keycloak Admin Guide, Full Scope Allowed and audience. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §§8, 11; Keycloak Admin Guide, Full Scope Allowed and audience. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
 
 ## Slide 11 — How objects interact during login
 
@@ -225,7 +225,7 @@ API validates access token and permissions
 **Self-check:** Does the API receive the OIDC ID token as its bearer authorization token?  
 **Answer:** No.
 
-**Sources:** Chapter §9; OIDC Core; RFC 6749; Keycloak OIDC docs. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [OIDC Core](https://openid.net/specs/openid-connect-core-1_0.html) · [RFC 6749](https://www.rfc-editor.org/rfc/rfc6749).
+**Sources:** Chapter §9; OIDC Core; RFC 6749; Keycloak OIDC docs. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/) · [OIDC Core](https://openid.net/specs/openid-connect-core-1_0.html) · [RFC 6749](https://www.rfc-editor.org/rfc/rfc6749).
 
 ## Slide 12 — Review and practical test
 
@@ -245,5 +245,5 @@ Verify access separately at the API
 **Self-check:** What is the strongest single mental model from this chapter?  
 **Answer:** Client scope shapes token information; API policy decides resource access.
 
-**Sources:** Chapter §§10–12; Keycloak Admin Guide. [Chapter](../../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
+**Sources:** Chapter §§10–12; Keycloak Admin Guide. [Chapter](../docs/08-realm-client-user-client-scope.md) · [Keycloak Administration Guide](https://www.keycloak.org/docs/latest/server_admin/).
 

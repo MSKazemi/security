@@ -1,7 +1,7 @@
 # Teaching slides — Bearer tokens and OAuth API requests
 
 **Audience:** beginners, students and software engineers.  
-**Canonical technical source:** [Bearer tokens](../../docs/07-bearer-token.md).  
+**Canonical technical source:** [Bearer tokens](../docs/07-bearer-token.md).  
 **Format:** 12 detailed text-first slide outlines with neutral examples. No video, brand assets, animation or platform workflow.
 
 ---
@@ -23,7 +23,7 @@
 **Self-check:** Does Bearer mean anyone can read every notebook?  
 **Answer:** No. A usable token must pass the API's checks and resource policy.
 
-**Sources:** Chapter §1; RFC 6750. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §1; RFC 6750. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
 ## Slide 02 — Where is Bearer sent in HTTP?
 
@@ -43,7 +43,7 @@
 **Self-check:** Is Bearer itself the token string?  
 **Answer:** No, it is the authentication scheme before the token value.
 
-**Sources:** Chapter §2; RFC 6750 §2.1. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §2; RFC 6750 §2.1. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
 ## Slide 03 — Bearer versus JWT versus opaque token
 
@@ -63,7 +63,7 @@
 **Self-check:** Can an opaque access token be used with Bearer?  
 **Answer:** Yes.
 
-**Sources:** Chapter §3; RFC 6750; RFC 7519. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §3; RFC 6750; RFC 7519. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
 ## Slide 04 — Trace the authorization-code flow
 
@@ -83,7 +83,7 @@
 **Self-check:** Should notes-api receive the authorization code instead of access token?  
 **Answer:** No.
 
-**Sources:** Chapter §4; OAuth RFC 6749; PKCE RFC 7636. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §4; OAuth RFC 6749; PKCE RFC 7636. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
 ## Slide 05 — What token_type tells the client
 
@@ -103,7 +103,7 @@
 **Self-check:** Is token_type=Bearer proof that the token is valid for every API?  
 **Answer:** No.
 
-**Sources:** Chapter §5; RFC 6749 §5.1. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §5; RFC 6749 §5.1. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
 ## Slide 06 — How the API validates Bearer
 
@@ -123,7 +123,7 @@
 **Self-check:** Will a correctly signed token for billing-api work at notes-api?  
 **Answer:** No, wrong audience.
 
-**Sources:** Chapter §6; RFC 7662; RFC 8725. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §6; RFC 7662; RFC 8725. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
 ## Slide 07 — 401, 403 and WWW-Authenticate
 
@@ -143,7 +143,7 @@
 **Self-check:** What is the typical status for a valid token denied by notebook policy?  
 **Answer:** 403 Forbidden.
 
-**Sources:** Chapter §7; RFC 6750 §3. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §7; RFC 6750 §3. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
 ## Slide 08 — Why stolen Bearer tokens matter
 
@@ -163,7 +163,7 @@
 **Self-check:** Does an attacker need Alice's password for every usable Bearer request?  
 **Answer:** No.
 
-**Sources:** Chapter §8; RFC 6750; RFC 9700. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §8; RFC 6750; RFC 9700. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
 ## Slide 09 — Bearer versus sender-constrained tokens
 
@@ -183,7 +183,7 @@
 **Self-check:** Can someone treat a DPoP-bound access token as ordinary Bearer?  
 **Answer:** A compliant supporting API must reject that downgrade.
 
-**Sources:** Chapter §9; RFC 9449; RFC 8705. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §9; RFC 9449; RFC 8705. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
 ## Slide 10 — Limits of proof-of-possession
 
@@ -203,7 +203,7 @@
 **Self-check:** Does DPoP remove the need for API authorization checks?  
 **Answer:** No.
 
-**Sources:** Chapter §9; RFC 9449 §11. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §9; RFC 9449 §11. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
 ## Slide 11 — How to demonstrate safely
 
@@ -223,7 +223,7 @@
 **Self-check:** Should a real access token be pasted into a public JWT decoder for teaching?  
 **Answer:** No.
 
-**Sources:** Chapter §10; RFC 6750. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §10; RFC 6750. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
 ## Slide 12 — Bearer's core lesson
 
@@ -243,5 +243,5 @@
 **Self-check:** Why is Bearer not the same as JWT?  
 **Answer:** Bearer describes presentation; JWT describes one possible representation.
 
-**Sources:** Chapter §§1–11; RFC 6750. [Canonical chapter](../../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
+**Sources:** Chapter §§1–11; RFC 6750. [Canonical chapter](../docs/07-bearer-token.md) · [RFC 6750 Bearer](https://www.rfc-editor.org/rfc/rfc6750) · [RFC 9449 DPoP](https://www.rfc-editor.org/rfc/rfc9449).
 
